@@ -3,10 +3,10 @@ require("dotenv").config({
 });
 
 const contentfulConfig = {
-  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  spaceId: 'pwf468tqmudn',
   accessToken:
-    process.env.CONTENTFUL_ACCESS_TOKEN ||
-    process.env.CONTENTFUL_DELIVERY_TOKEN,
+    'd7STaZCCuzAFGoaAhrJiP5FJ0n24ONNg1Pqhb7NvVxk' ||
+    'd7STaZCCuzAFGoaAhrJiP5FJ0n24ONNg1Pqhb7NvVxk',
 };
 
 // If you want to use the preview API please define
@@ -45,10 +45,20 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
+    "react-flickity-component",
+    "react-countup",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `poppins\:100, 200, 300, 400, 500, 600, 700, 800`
+        ]
+      },
     },
   ],
 };

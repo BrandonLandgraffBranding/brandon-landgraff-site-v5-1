@@ -2,23 +2,51 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
+import Banner from '../components/banner';
+import Reviews from '../components/reviews';
+import Bio from '../components/bio';
+import Diagram from '../components/diagram';
+import BlogIntro from '../components/blogintro';
+// import Stats from '../components/stats';
+
 import Layout from '../components/layout'
-import Hero from '../components/hero'
+// import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 
+import LocomotiveScroll from "locomotive-scroll";
+
 class RootIndex extends React.Component {
+
+  componentDidMount() {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector(".main-container"),
+      smooth: true
+    });
+  }
+  
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
-    const [author] = get(this, 'props.data.allContentfulPerson.nodes')
+    // const [author] = get(this, 'props.data.allContentfulPerson.nodes')
 
     return (
+
       <Layout location={this.props.location}>
-        <Hero
+        <div className='main-container' id='main-container' data-scroll-container>
+
+        <Banner />
+        <Reviews />
+        <Bio />
+        <Diagram />
+        <BlogIntro />
+        {/* <Stats /> */}
+        
+        {/* <Hero
           image={author.heroImage.gatsbyImageData}
           title={author.name}
           content={author.shortBio.shortBio}
-        />
+        /> */}
         <ArticlePreview posts={posts} />
+        </div>
       </Layout>
     )
   }
