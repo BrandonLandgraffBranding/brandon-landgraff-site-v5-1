@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
+// import './locomotive-scroll.css';
 
-const LocomotiveTest = () => {
+const LocomotiveScroll = () => {
 
     const scrollRef = useRef(null)
 
@@ -15,5 +16,5 @@ const LocomotiveTest = () => {
       }, [])
     }
   
-  export default LocomotiveTest
+  export default LocomotiveScroll
   

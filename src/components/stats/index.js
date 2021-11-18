@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useCountUp } from 'react-countup';
+import CountUp from 'react-countup'
+
 import './stats.css';
 
 import Container from '../container';
@@ -43,13 +44,15 @@ const Stats = () => {
   
 
   return (
-        <div className={stats ? 'stats activeWhite' : 'stats'} data-scroll-section>
+    <section data-scroll-section>
+        <div className={stats ? 'stats activeWhite' : 'stats'}>
             <Container>
             <div id="" ref={countUpRefExp} />
                 <h4>PAST PROJECTS, IDEAS, AND MORE</h4>
                 <h2 className='blog__stats'>Blog</h2>
             </Container>
         </div>
+    </section>
   )
 }
 

@@ -19,12 +19,12 @@ const Diagram = () => {
     }, [])
 
   return (
-        <div data-scroll-section>
+        <section data-scroll-section>
             <Container>
                 <h4>CAPABILITIES</h4>
                 <div className="container" ref={container}></div>
             </Container>
-        </div>
+        </section>
   )
 }
 

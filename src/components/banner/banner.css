@@ -4,6 +4,7 @@
 
 .banner__title {
   position: relative;
+  font-size: 12px;
   z-index: 1;
 }
 
@@ -139,4 +140,13 @@
   .hero-content-line-inner {
     margin-top: -48px;
   }
+
+  .banner__title {
+    font-size: 10px;
+  }
+
+  .banner__items {
+    padding-bottom: 28vw;
+  }
+
 }

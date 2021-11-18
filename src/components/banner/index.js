@@ -10,9 +10,6 @@ const Banner = () => {
     let tl = gsap.timeline();
 
     useEffect(()=>{
-        // gsap(app, 0, {css: {visibility: 'visible'}})
-        // console.log(app)
-
         //Content vars
         const headlineFirst = content.children[0].children[0];
         const headlineSecond = headlineFirst.nextSibling;
@@ -33,7 +30,10 @@ const Banner = () => {
     })
 
         return (
-            <div className='section__width' ref={el => app = el} data-scroll-section>
+        <section className='vh-100' data-scroll-section>
+            <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+             data-scroll-id="#FCFCFC" />
+            <div className='section__width' ref={el => app = el}>
                 <div className='banner__items'>
                     <div>
                     <h5 className='banner__title'>LOOKING TO OPTIMIZE THE H*CK OUT OF YOUR STORE?</h5>
@@ -61,7 +61,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-
+        </section>
         )
 
 }

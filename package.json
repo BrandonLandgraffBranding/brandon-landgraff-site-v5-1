@@ -8,6 +8,7 @@
     "url": "https://github.com/contentful/starter-gatsby-blog/issues"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "flickity": "^2.2.2",
     "gatsby": "^3.10.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
