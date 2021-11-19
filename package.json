@@ -28,6 +28,8 @@
     "react-dom": "^17.0.2",
     "react-flickity-component": "^3.6.2",
     "react-helmet": "^6.1.0",
+    "react-images-loaded": "^2.0.0",
+    "react-loadable": "^5.5.0",
     "react-split": "^2.0.13",
     "split.js": "^1.6.4",
     "splitting": "^1.0.6"

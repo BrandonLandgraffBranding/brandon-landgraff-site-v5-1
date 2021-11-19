@@ -146,7 +146,8 @@
   }
 
   .banner__items {
-    padding-bottom: 28vw;
+    margin-bottom: 0;
+    padding-bottom: 600px;
   }
 
 }

@@ -1,5 +1,9 @@
-import React, { useState, useEffect } from "react";
-import CountUp from 'react-countup'
+import React, { useEffect, useRef, useState } from 'react'
+import { useCountUp } from 'react-countup'
+import gsap from 'gsap'
+import SplitText from '../../components/utils/Split3.min.js'
+import cn from 'classnames';
+import useOnScreen from '../../components/hooks/useOnScreen.js'
 
 import './stats.css';
 
@@ -8,48 +12,54 @@ import Container from '../container';
 
 const Stats = () => {
 
+    //Count Up
     const countUpRefExp = React.useRef(null);
 
     const { start } = useCountUp({
         ref: countUpRefExp,
         duration: 1,
-        end: 7
+        end: 22,
+        suffix: "+"
         // startOnMount: true
-    })
+    });
 
+    //Reveal Animation
+    const ref = useRef();
 
+    const [reveal, setReveal] = useState(false);
 
-    //navbar scroll when active state
-    const [stats, setWhite] = useState(false)
+    const onScreen = useOnScreen(ref);
 
-    //navbar scroll changeBackground function
-    const changeBackground = () => {
-      console.log(window.scrollY)
-      if (window.scrollY >= 1000) {
-          setWhite(true)
-          start(true)
+    useEffect(()=>{
+      if(onScreen) setReveal(onScreen);
+    }, [onScreen]);
 
-      } else {
-          setWhite(false)
-          start(false)
+    useEffect(() => {
+      if(reveal){
+        const split = new SplitText("#count-up-text", {
+          type: "lines",
+        });
+
+        gsap.to(split.lines, {
+          duration: 1,
+          y: -20,
+          opacity: 1,
+          stagger: 0.1,
+          ease: "power2",
+        });
+
+        
+        start();
 
       }
-    }
+    }, [reveal]);
   
-    useEffect(() => {
-      changeBackground()
-      // adding the event when scroll change background
-      window.addEventListener("scroll", changeBackground)
-    })
-  
-
   return (
-    <section data-scroll-section>
-        <div className={stats ? 'stats activeWhite' : 'stats'}>
+    <section className={cn('stats-section')} data-scroll-section>
+        <div className='stats dark-bg'>
             <Container>
-            <div id="" ref={countUpRefExp} />
-                <h4>PAST PROJECTS, IDEAS, AND MORE</h4>
-                <h2 className='blog__stats'>Blog</h2>
+                <h4>EXPERIENCE</h4>
+                <h5 ref={ref} id='count-up-text' className={cn({'is-reveal': reveal})}><span id='count-up' ref={countUpRefExp} /> Successful Projects Completed Using The Following</h5>
             </Container>
         </div>
     </section>

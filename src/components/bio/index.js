@@ -3,11 +3,10 @@ import gsap from 'gsap'
 import SplitText from '../../components/utils/Split3.min.js'
 import cn from 'classnames';
 import useOnScreen from '../../components/hooks/useOnScreen.js'
-import CountUp from 'react-countup'
 
 import './bio.css'
 
-import Brandon from '../../images/brandon.jpg'
+import Brandon from '../../images/brandon.webp'
 
 const Bio = () => {
 

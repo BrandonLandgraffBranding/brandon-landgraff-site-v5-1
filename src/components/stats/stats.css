@@ -3,14 +3,25 @@
     height: 124px;
     padding-top: 24px 0 48px 0;
     margin-top: 0px;
-    background-color: black;
 }
 
-.stats__title {
+.count-up {
+    font-weight: 700;
+}
+
+#count-up-text div {
+    opacity: 0;
+}
+
+#count-up-text .isreveal div {
+    opacity: 1;
+}
+
+/* .stats__title {
     color: #FCFCFC;
 }
 
 .activeWhite .stats__title {
     transition: background-color 2s ease;
     color: black;
-}
+} */

@@ -7,7 +7,6 @@ const Banner = () => {
 
     let app = useRef(null);
     let content = useRef(null);
-    let tl = gsap.timeline();
 
     useEffect(()=>{
         //Content vars
