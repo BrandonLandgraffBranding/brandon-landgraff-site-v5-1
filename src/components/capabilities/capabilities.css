@@ -1,3 +1,14 @@
+.capabilities {
+    padding: 12vw 0 12vw 0;
+    margin: auto; 
+    width: 80%;
+}
+
+/* #capabilities-text {
+    margin-top: 0;
+    margin-bottom: 0;
+} */
+
 .line-div {
     display: block;
     height: 100%;
@@ -26,6 +37,7 @@
     display: grid;
     grid-template-columns: 24px auto;
     grid-gap: 24px;
+    /* width: 30%; */
 }
 
 .capability-item h2 {

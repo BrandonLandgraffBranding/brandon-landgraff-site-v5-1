@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import Logo from '../images/BrandonLandgraffLogo.svg'
+
 import * as styles from './navigation.module.css'
 
 
 const Navigation = () => (
   <nav role="navigation" className={styles.container} aria-label="Main">
     <Link to="/" className={styles.logoLink}>
-      <span className={styles.logo} />
-      <span className={styles.navigationItem}>Gatsby Starter Contentful</span>
+      <img id='footer-logo' src={Logo} alt="Brandon Landgraff Logo"/>
     </Link>
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>

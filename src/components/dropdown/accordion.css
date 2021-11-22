@@ -1,0 +1,59 @@
+/* Style the accordion section */
+.accordion-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style the buttons that are used to open and close the accordion panel */
+  .faq-accordion {
+    background-color: #121212;
+    color: #FCFCFC;
+    cursor: pointer;
+    padding: 12px 0 12px 0;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-top: 1px solid #EFEFEF;
+    outline: none;
+    transition: background-color 0.6s ease;
+    transition: padding 0.6s ease;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .faq-accordion:hover,
+  .faq-active {
+    background-color: #1C1C1C;
+    padding: 12px 12px 12px 12px;
+  }
+  
+  /* Style the accordion content title */
+  .accordion-title {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  /* Style the accordion chevron icon */
+  .accordion-icon {
+    margin-left: auto;
+    transition: transform 0.6s ease;
+  }
+  
+  /* Style to rotate icon when state is active */
+  .rotate-icon {
+    transform: rotate(90deg);
+  }
+  
+  /* Style the accordion content panel. Note: hidden by default */
+  .accordion-content {
+    background-color: #EFEFEF;
+    color: #1C1C1C;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+  }
+  
+  /* Style the accordion content text */
+  .accordion-text {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 12px;
+  }

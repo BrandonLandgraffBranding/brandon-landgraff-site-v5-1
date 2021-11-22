@@ -1,21 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* .main-container{
-  overflow: hidden;
-}
-
-#main-container{
-  overflow: hidden;
-}
-
-.main-container .has-scroll-smooth {
-  overflow: hidden;
-}
-
-#main-container .has-scroll-smooth {
-  overflow: hidden;
-} */
-
 /* html {
   scroll-behavior: smooth;
 } */
@@ -91,10 +75,11 @@ a {
 }
 
 a:hover {
-  color: var(--primary);
+  color: #E6AE00;
 }
 
 a.active {
+  color: #E6AE00;
   font-weight: var(--bold);
 }
 
@@ -145,6 +130,57 @@ code {
   transform: rotate(270deg);
 }
 
+
+/* Loading Screen Styling */
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #1C1C1C;
+}
+
+.loader-wrapper h1, h3 {
+  color: #FCFCFC;
+}
+
+
+.absolute {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #1C1C1C;
+  z-index: 1;
+}
+
+/* Body Colour Change */
+
+body{   
+  transition: background-color 1s ease;
+}
+
+/* Dark Background */
+.dark-bg {
+  color: #CFCFCF;
+}
+
+/* Columns */
+.two-column {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+/* Header and Subheader Custom Styling */
+.text-margin {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Mobile Optimized */
 @media only screen and (max-width: 768px) {
   h1 {
     font-family: 'Poppins', sans-serif;
@@ -185,65 +221,10 @@ code {
     font-size: 12px;
     font-weight: 500;
   }
+
+  .two-column {
+    grid-template-columns: auto;
+  }
 }
 
-.activeWhite {
-  transition: background-color 2s ease;
-  background-color: #FCFCFC;
-  color: black;
-}
-
-/* Loading Screen Styling */
-.loader-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #1C1C1C;
-}
-
-.loader-wrapper h1, h3 {
-  color: #FCFCFC;
-}
-
-
-.absolute {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #1C1C1C;
-  z-index: 1;
-}
-
-/* Body Colour Change */
-
-body{   
-  transition: background-color 1s ease;
-}
-
-/* Dark Background */
-.dark-bg {
-  color: #CFCFCF;
-}
-
-   /* End */
-
-   /* .has-scroll-smooth [data-scroll-container] {
-    min-height: 100vh; }
-
-    /* #main-container.has-scroll-smooth {
-      overflow: hidden !important; } */
-
-      /* .main-container .has-scroll-smooth {
-        overflow: hidden !important; } */ 
-
-        /* html.has-scroll-smooth {
-          display: flex !important; } */
-        
-        /* .has-scroll-smooth body {
-          overflow: hidden !important; } */
-        
-        /* .has-scroll-smooth [data-scroll-container] {
-          min-height: 100vh; } */
+/* End */

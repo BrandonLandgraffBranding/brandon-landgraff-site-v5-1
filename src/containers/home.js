@@ -5,7 +5,7 @@ import Reviews from '../components/reviews';
 import Bio from '../components/bio';
 // import Diagram from '../components/diagram';
 import Capabilities from '../components/capabilities';
-import Stats from '../components/stats';
+import FAQ from '../components/accordion';
 
 import Layout from '../components/layout'
 
@@ -66,12 +66,29 @@ const Home = () => {
       ) : (
         <div className='main-container' id='main-container' data-scroll-container ref={ref}>
         <Layout>
-        <Banner />
-        <Reviews />
-        <Bio />
-        {/* <Diagram /> */}
-        <Capabilities />
-        <Stats /> 
+          <Banner />
+          <Reviews />
+          <Bio />
+          {/* <Diagram /> */}
+          <Capabilities />
+          <FAQ />
+          {/* <Accordion
+            title="What is your return policy?"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          />
+          <Accordion
+            title="Which languages does you support?"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          />
+          <Accordion
+            title="Can I use a custom domain?"
+            content="
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </br>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </br>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          />  */}
         </Layout>   
       </div>
       )}

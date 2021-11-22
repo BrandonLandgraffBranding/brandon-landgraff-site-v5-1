@@ -9,6 +9,13 @@ import './stats.css';
 
 import Container from '../container';
 
+import shopify from '../../icons/shopify.svg'
+import illustrator from '../../icons/illustrator.svg'
+import xd from '../../icons/xd.svg'
+import css from '../../icons/css.svg'
+import html from '../../icons/html.svg'
+import javascript from '../../icons/javascript.svg'
+
 
 const Stats = () => {
 
@@ -59,7 +66,15 @@ const Stats = () => {
         <div className='stats dark-bg'>
             <Container>
                 <h4>EXPERIENCE</h4>
-                <h5 ref={ref} id='count-up-text' className={cn({'is-reveal': reveal})}><span id='count-up' ref={countUpRefExp} /> Successful Projects Completed Using The Following</h5>
+                <h5 ref={ref} id='count-up-text' className={cn({'is-reveal': reveal})}><span id='count-up' ref={countUpRefExp} /> Successful Projects Completed With Agencies & Clients</h5>
+                <div classname='icons-container'>
+                  <div className='exp-icon'><img src={shopify} /></div>
+                  <div className='exp-icon'><img src={illustrator} /></div>
+                  <div className='exp-icon'><img src={xd} /></div>
+                  <div className='exp-icon'><img src={css} /></div>
+                  <div className='exp-icon'><img src={html} /></div>
+                  <div className='exp-icon'><img src={javascript} /></div>
+                </div>
             </Container>
         </div>
     </section>
