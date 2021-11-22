@@ -5,7 +5,7 @@
 }
 
 .testimonials__section {
-    padding: 16vw 0 16vw 0;
+    padding: 0vw 0 16vw 0;
     text-align: center;
 }
 
@@ -48,7 +48,7 @@
     }
 
     .testimonials__section {
-        padding: 4vw 0 24vw 0;
+        padding: 0vw 0 12vw 0;
     }
 
     .carousel-cell {

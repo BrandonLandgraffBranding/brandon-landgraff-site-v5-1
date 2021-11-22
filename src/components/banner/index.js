@@ -5,6 +5,8 @@ import './banner.css';
 
 const Banner = () => {
 
+    // Title Text Animation
+
     let app = useRef(null);
     let content = useRef(null);
 
@@ -27,6 +29,8 @@ const Banner = () => {
         });
 
     })
+
+    // Line Animation
 
         return (
         <section className='vh-100' data-scroll-section>
@@ -59,7 +63,13 @@ const Banner = () => {
                         <div className='triangle spin-top'></div>
                     </div>
                 </div>
+
+
             </div>
+
+            {/* <div className='line-container'>
+                    <div className='line-div' data-scroll/>
+                </div> */}
         </section>
         )
 

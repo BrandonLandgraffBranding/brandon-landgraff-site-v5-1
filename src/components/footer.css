@@ -53,4 +53,16 @@
 #stay-updated {
   font-size: 18px;
   padding-left: 20px;
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #stay-updated {
+    padding-left: 0px;
+  }
+
+  .sm-item { 
+    padding-left: 0px;
+  }
+
 }

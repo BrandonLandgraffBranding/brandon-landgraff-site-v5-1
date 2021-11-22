@@ -31,9 +31,9 @@ img.is-reveal {
       grid-template-columns: 1fr;
     }
 
-    .bio__text_container {
+    /* .bio__text_container {
         margin: 0 24px 48px 24px;
-    }
+    } */
   }
 
 

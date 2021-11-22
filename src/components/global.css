@@ -72,15 +72,17 @@ p {
 a {
   color: currentColor;
   text-decoration: none;
+  transition: color 0.5s ease;
+  font-weight: 600;
 }
 
 a:hover {
-  color: #E6AE00;
+  color: #E5E5E5;
 }
 
 a.active {
   color: #E6AE00;
-  font-weight: var(--bold);
+  /* font-weight: var(--bold); */
 }
 
 tt,
@@ -223,6 +225,7 @@ body{
   }
 
   .two-column {
+    gap: 0px;
     grid-template-columns: auto;
   }
 }
