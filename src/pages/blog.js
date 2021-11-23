@@ -7,12 +7,22 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 
+// import LocomotiveScroll from 'locomotive-scroll'
+
 class BlogIndex extends React.Component {
+
+  // componentDidMount() {
+  //   this.scroll = new LocomotiveScroll({
+  //     el: document.querySelector("blog-locomotivescroll"),
+  //     smooth: true,
+  //   })
+  //   setTimeout(() => this.scroll.update(), 300);
+  // }
+
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
-
     return (
-      <Layout location={this.props.location}>
+      <Layout className='blog-locomotivescroll' location={this.props.location}>
         <Seo title="Blog" />
         <Hero title="Blog" />
         <ArticlePreview posts={posts} />
