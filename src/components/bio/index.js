@@ -70,8 +70,6 @@ const Bio = () => {
             <h4 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>INTRODUCTION</h4>
             <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>My name is Brandon Landgraff. 👋 I’m a solopreneur who builds brands and custom Shopify stores. It’s my job to use my creative capabilities to improve your store and drive sales.</h5>
             <h5 ref={ref} id='count-up-text' className={cn({'is-reveal text-margin': reveal})}><span id='count-up' ref={countUpRefExp} /> Successful Projects Completed With Agencies and Clients</h5>
-            {/* <h2><CountUp end={100} /></h2>
-            <p>Succesful Projects Completed As Of 2021</p> */}
           </div>
         </div>
       </Container>

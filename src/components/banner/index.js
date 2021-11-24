@@ -6,7 +6,6 @@ import './banner.css';
 const Banner = () => {
 
     // Title Text Animation
-
     let app = useRef(null);
     let content = useRef(null);
 
@@ -16,8 +15,6 @@ const Banner = () => {
         const headlineSecond = headlineFirst.nextSibling;
         const headlineThird = headlineSecond.nextSibling;
         const headlineFourth = headlineThird.nextSibling;
-        
-        // console.log(headlineFirst, headlineSecond, headlineThird)
 
         //Content Animation
         gsap.to([headlineFirst.children, headlineSecond.children, headlineThird.children, headlineFourth.children], {
@@ -29,8 +26,6 @@ const Banner = () => {
         });
 
     })
-
-    // Line Animation
 
         return (
         <section className='vh-100' data-scroll-section>
@@ -66,10 +61,6 @@ const Banner = () => {
 
 
             </div>
-
-            {/* <div className='line-container'>
-                    <div className='line-div' data-scroll/>
-                </div> */}
         </section>
         )
 

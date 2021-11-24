@@ -16,6 +16,7 @@ import * as styles from './article-preview.module.css'
 
 const ArticlePreview = ({ posts }) => {
 
+
   // Scroll Triggers
   // const ref = useRef(null);
 

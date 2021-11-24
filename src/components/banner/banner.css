@@ -14,7 +14,6 @@
 }
 
 /* Line Expanding */
-
 .line-div {
     display: block;
     height: 100%;
@@ -30,17 +29,7 @@
     overflow: hidden;
 }
 
-/* .line-container div {
-    clip-path: inset(0% 0% 100% 0%);
-    transition: clip-path 3s cubic-bezier(0.77, 0, 0.75, 1);
-}
-
-.line-div.is-reveal {
-    clip-path: inset(0% 0% 0% 0%);
-} */
-
 /* Floating Shapes */
-
 .shapes .sqare { 
   z-index: -1;
   position: absolute; 

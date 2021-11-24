@@ -4,14 +4,12 @@ import { Link } from 'gatsby'
 import Logo from '../images/BrandonLandgraffMasterLogo.svg'
 import LogoMark from '../images/BrandonLandgraffMarkLogo.svg'
 
-// import * as styles from './navigation.module.css'
-
 import './navigation.css'
 
 import Container from './container'
 
 const Navigation = () => (
-  <Container>
+  <Container data-scroll-section>
   <div className='menu'>
     <Link to="/" className='nav-logo'>
       <img id='nav-logo-master' src={Logo} alt="Brandon Landgraff Logo"/>

@@ -26,25 +26,6 @@ function Carousel () {
   }
 
 const Reviewbar = () => {
-  // //navbar scroll when active state
-  // const [reviewbar, setReviewbar] = useState(false)
-
-  // //navbar scroll changeBackground function
-  // const changeBackground = () => {
-  //   console.log(window.scrollY)
-  //   if (window.scrollY >= 100) {
-  //       setReviewbar(true)
-  //   } else {
-  //       setReviewbar(false)
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   changeBackground()
-  //   // adding the event when scroll change background
-  //   window.addEventListener("scroll", changeBackground)
-  // })
-
   return (
     <section className='vh-100' data-scroll-section>
       <div className='reviewbar'>

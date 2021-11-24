@@ -53,12 +53,6 @@ const ScrollProvider = ({ children, as = 'div' }) => {
     </div> 
     ) : (
     <Tag
-    //   style={{
-    //     maxWidth: 'var(--size-max-width)',
-    //     margin: '0 auto',
-    //     padding: 'var(--space-2xl) var(--size-gutter)',
-    //   }}
-
     className='main-container'
     id='main-container'
     data-scroll-container

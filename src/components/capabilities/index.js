@@ -46,7 +46,6 @@ const Capabilities = () => {
           <div className='capabilities-explain'>
             <h4 ref={ref} id='capabilities-text' className={cn({'is-reveal text-margin': reveal})}>MY CAPABILITIES</h4>
             <h5 ref={ref} id='capabilities-text' className={cn({'is-reveal text-margin': reveal})}>I can change any design element in a shopify store. I'm a multidisciplinary individual who offers multiple skills sets but thinks about projects more holistically and comprehensively.</h5> 
-            {/* <p>I'm a multidisciplinary individual who offers multiple skills sets but thinks about projects more holistically and comprehensively.</p> */}
           </div>
           <div className='capabilities'>
                   <div className='cabailities-container'>

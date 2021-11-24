@@ -8,13 +8,17 @@ import Hero from '../components/hero'
 import Tags from '../components/tags'
 import * as styles from './blog-post.module.css'
 
+import ScrollProvider from '../components/locomotivescrollprovider'
+
 class BlogPostTemplate extends React.Component {
+
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
 
     return (
+        <ScrollProvider>
         <BlogLayout location={this.props.location}>
 
           <Seo
@@ -28,7 +32,7 @@ class BlogPostTemplate extends React.Component {
             title={post.title}
             content={post.description.childMarkdownRemark.excerpt}
           />
-
+          <section data-scroll-section>
           <div className={styles.container}>
             <span className={styles.meta}>
               {post.author.name} &middot;{' '}
@@ -65,8 +69,10 @@ class BlogPostTemplate extends React.Component {
               )}
             </div>
           </div>
+          </section>
 
         </BlogLayout>
+        </ScrollProvider>
     )
   }
 }

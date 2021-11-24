@@ -31,14 +31,20 @@
 .sm-item {
   display: inline-block;
   padding: 0 20px 0 20px;
+  color: #2F2F2F;
 } 
 
 .footer-information {
   width: 80%;
 }
 
+#footer-text {
+  color: #2F2F2F;
+}
+
 #credit {
   padding-top: 12vw;
+  color: #2F2F2F;
 }
 
 #footer-logo {
@@ -48,12 +54,14 @@
 
 #ask-for-availability {
   font-size: 60px;
+  color: #2F2F2F;
 }
 
 #stay-updated {
   font-size: 18px;
   padding-left: 20px;
   margin-top: 0;
+  color: #2F2F2F;
 }
 
 @media only screen and (max-width: 768px) {
