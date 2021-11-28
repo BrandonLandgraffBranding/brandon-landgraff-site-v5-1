@@ -26,13 +26,13 @@ const ArticlePreview = ({ posts }) => {
               <li key={post.slug}>
                 <a href={`/blog/${post.slug}`} className='blog-link'>
                     <GatsbyImage alt="" image={post.heroImage.gatsbyImageData} data-scroll/>
-                  <h2>{post.title}</h2>
+                  <h2 id='blog-title'>{post.title}</h2>
                 </a>
-                <div
+                {/* <div
                   dangerouslySetInnerHTML={{
                     __html: post.description.childMarkdownRemark.html,
                   }}
-                />
+                /> */}
                 <div className='meta'>
                   <small className="meta">{post.publishDate}</small>
                   <Tags tags={post.tags} />

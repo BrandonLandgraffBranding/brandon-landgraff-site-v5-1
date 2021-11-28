@@ -9,7 +9,7 @@ import './navigation.css'
 import Container from './container'
 
 const Navigation = () => (
-  <section data-scroll-section>
+  <Container data-scroll-section>
   <div className='menu'>
     <div className='menu-wrapper'>
       <a href="/" className='nav-logo'>
@@ -32,7 +32,7 @@ const Navigation = () => (
     </nav>
     </div>
   </div>
-  </section>
+  </Container>
 )
 
 export default Navigation

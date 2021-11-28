@@ -18,6 +18,7 @@
   letter-spacing: var(--text-prose-tracking);
   line-height: var(--loose);
   padding: var(--size-gutter) var(--size-gutter) calc(var(--size-gutter) * 2);
+  padding-bottom: 0px;
 }
 
 .body {
