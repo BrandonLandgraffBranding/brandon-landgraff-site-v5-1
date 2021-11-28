@@ -1,15 +1,11 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 
 import Logo from '../images/BrandonLandgraffMasterLogo.svg'
 import LogoMark from '../images/BrandonLandgraffMarkLogo.svg'
 
 import './navigation.css'
 
-import Container from './container'
-
 const Navigation = () => (
-  <Container data-scroll-section>
   <div className='menu'>
     <div className='menu-wrapper'>
       <a href="/" className='nav-logo'>
@@ -32,7 +28,6 @@ const Navigation = () => (
     </nav>
     </div>
   </div>
-  </Container>
 )
 
 export default Navigation

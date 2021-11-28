@@ -3,15 +3,13 @@
 }
 
 .banner-items {
-  margin: 8vw 0 20vw 0;
+  margin: 12vw 0 20vw 0;
 }
 
 .banner-title {
   position: relative;
-  font-size: 12px;
-  font-weight: 700;
   z-index: 100;
-}
+} 
 
 .banner-subheader {
   position: relative;
@@ -21,23 +19,7 @@
 .hero-paragraph {
   position: relative;
   z-index: 100;
-  width: 250px;
-}
-
-/* Line Expanding */
-.line-div {
-    display: block;
-    height: 100%;
-    width: 1px;
-    background-color: #E5E5E5;
-}
-
-.line-container {
-    width: 100%;
-    height: 75%;
-    width: 1px;
-    position: relative;
-    overflow: hidden;
+  width: 50%;
 }
 
 .hero-content-line {
@@ -47,116 +29,6 @@
 
 .hero-content-line-inner {
   margin-top: -82px;
-}
-
-/* Floating Shapes */
-.shapes .sqare { 
-  z-index: -1;
-  position: absolute; 
-  top: -400px;
-  left: 50px;
-  width: 120px; 
-  height: 480px; 
-  background-color: #E2A400;
-  filter: blur(16px);
-}
-
-.shapes .circle { 
-  position: absolute; 
-  top: -200px;
-  left: 300px;
-  width: 236px; 
-  height: 355px; 
-  border-radius: 0 350px 350px 0;
-  background-color: #E2A400;
-  filter: blur(16px);
-}
-
-.shapes .triangle {
-  position: absolute; 
-  top: -350px;
-  left: 600px;
-  width: 151px; 
-  height: 226px; 
-  border-radius: 0 350px 350px 0;
-  background-color: #E2A400;
-  filter: blur(16px);
-}
-
-.float {
-  animation-name: Floating;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes Floating{
-    from {-webkit-transform:translate(0, 0px);}
-    65% {-webkit-transform:translate(0, 50px);}
-    to {-webkit-transform: translate(0, -0px);}    
-}
-
-.spin {
-  animation-name: Spinning;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-.spin-top {
-  animation-name: Spinning-Top;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes Spinning-Top{
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(-25deg);
-  } 
-  100% {
-      -webkit-transform: rotate(0deg);
-  } 
-}
-
-@keyframes Spinning{
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  80% {
-    -webkit-transform: rotate(-25deg);
-  } 
-  100% {
-      -webkit-transform: rotate(0deg);
-  } 
-}
-
-@media only screen and (max-width: 768px) {
-  .shapes .sqare { 
-    top: -200px;
-    left: 20px;
-    width: 60px; 
-    height: 240px; 
-  }
-  
-  .shapes .circle { 
-    position: absolute; 
-    top: -50px;
-    left: 100px;
-    width: 118px; 
-    height: 177px; 
-  }
-  
-  .shapes .triangle {
-    top: -200px;
-    left: 150px;
-    width: 75px; 
-    height: 113px; 
-  }
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -170,18 +42,21 @@
   }
 
   .banner-items {
-    margin-bottom: 0;
+    margin: 32vw 0 0 0;
     padding-bottom: 300px;
   }
 
   #header-text {
     color: #2F2F2F;
-    font-size: 40px;
-    /* font-weight: 500; */
+    font-size: 42px;
   }
 
   .hero-text-container {
     padding-left: 0;
+  }
+
+  .hero-paragraph {
+    width: 100%;
   }
 
 }

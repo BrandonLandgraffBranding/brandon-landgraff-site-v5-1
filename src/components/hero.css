@@ -29,6 +29,7 @@
 .blog-post-title {
   line-height: 1em;
   margin: 2vw 0 2vw;
+  font-size: 40px;
 }
 
 .blog-post-content {
@@ -51,7 +52,7 @@
   }
 
   .blog-post-title {
-    font-size: 48px;
+    font-size: 30px;
     margin-top: 6vw;
   }
 

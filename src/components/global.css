@@ -26,7 +26,7 @@ img {
 h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 60px;
-  font-weight: 300;
+  font-weight: 500;
   color: #1C1C1C;
 }
 
@@ -46,8 +46,8 @@ h3 {
 h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  font-weight: 200;
-  letter-spacing: 0.8em;
+  font-weight: 500;
+  letter-spacing: 0.5em;
   color: #4A4A4A;
 }
 
@@ -213,8 +213,8 @@ body{
 @media only screen and (max-width: 768px) {
   h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 42px;
+    font-weight: 500;
     color: #1C1C1C;
   }
   
@@ -255,6 +255,116 @@ body{
     gap: 0px;
     grid-template-columns: auto;
   }
+}
+
+/* Floating Shapes */
+.shapes .sqare { 
+  z-index: -1;
+  position: absolute; 
+  top: -400px;
+  left: 50px;
+  width: 120px; 
+  height: 480px; 
+  background-color: #E2A400;
+  filter: blur(16px);
+}
+
+.shapes .circle { 
+  position: absolute; 
+  top: -200px;
+  left: 300px;
+  width: 236px; 
+  height: 355px; 
+  border-radius: 0 350px 350px 0;
+  background-color: #E2A400;
+  filter: blur(16px);
+}
+
+.shapes .triangle {
+  position: absolute; 
+  top: -350px;
+  left: 600px;
+  width: 151px; 
+  height: 226px; 
+  border-radius: 0 350px 350px 0;
+  background-color: #E2A400;
+  filter: blur(16px);
+}
+
+.float {
+  animation-name: Floating;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes Floating{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 50px);}
+    to {-webkit-transform: translate(0, -0px);}    
+}
+
+.spin {
+  animation-name: Spinning;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.spin-top {
+  animation-name: Spinning-Top;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes Spinning-Top{
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-25deg);
+  } 
+  100% {
+      -webkit-transform: rotate(0deg);
+  } 
+}
+
+@keyframes Spinning{
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(-25deg);
+  } 
+  100% {
+      -webkit-transform: rotate(0deg);
+  } 
+}
+
+@media only screen and (max-width: 768px) {
+  .shapes .sqare { 
+    top: -400px;
+    left: 20px;
+    width: 60px; 
+    height: 240px; 
+  }
+  
+  .shapes .circle { 
+    position: absolute; 
+    top: -250px;
+    left: 100px;
+    width: 118px; 
+    height: 177px; 
+  }
+  
+  .shapes .triangle {
+    top: -450px;
+    left: 150px;
+    width: 75px; 
+    height: 113px; 
+  }
+
 }
 
 /* End */

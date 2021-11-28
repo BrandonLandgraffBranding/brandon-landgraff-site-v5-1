@@ -34,7 +34,7 @@ const Banner = () => {
             <div className='section__width' ref={el => app = el}>
                 <div className='banner-items'>
                     <div className='hero-text-container'>
-                    <h5 className='banner-title'>WHY HELLO THERE!</h5>
+                    <h4 className='banner-title'>WHY HELLO THERE!</h4>
                     <div className='hero-content-inner' ref={el => content = el}>
                         <h1 id="header-text" className='banner-subheader'>
                             <div className='hero-content-line'>
@@ -51,9 +51,9 @@ const Banner = () => {
                             </div>
                         </h1>
                     </div>
-                    <p className='hero-paragraph'>
+                    <h2 className='hero-paragraph'>
                         My specialty is optimizing Shopify stores by designing and coding intuitive interfaces.
-                    </p>
+                    </h2>
                     </div>
                     <div className='shapes float'>
                         <div className='sqare spin'></div>

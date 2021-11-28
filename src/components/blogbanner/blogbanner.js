@@ -51,9 +51,9 @@ const BlogBanner = () => {
                             </div>
                         </h1>
                     </div>
-                    <p className='blog-hero-paragraph'>
+                    <h2 className='blog-hero-paragraph'>
                         In my blog I talk about Shopify specific topics such as branding, user experience, user interface, and web design techniques.
-                    </p>
+                    </h2>
                     </div>
                     <div className='shapes float'>
                         <div className='sqare spin'></div>
