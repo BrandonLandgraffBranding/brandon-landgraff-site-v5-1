@@ -19,59 +19,59 @@ class BlogPostTemplate extends React.Component {
 
     return (
         <ScrollProvider>
-        <BlogLayout location={this.props.location}>
+          <BlogLayout location={this.props.location}>
 
-          <Seo
-            title={post.title}
-            description={post.description.childMarkdownRemark.excerpt}
-            image={`http:${post.heroImage.resize.src}`}
-          />
+            <Seo
+              title={post.title}
+              description={post.description.childMarkdownRemark.excerpt}
+              image={`http:${post.heroImage.resize.src}`}
+            />
 
-          <Hero
-            image={post.heroImage.gatsbyImageData}
-            title={post.title}
-            content={post.description.childMarkdownRemark.excerpt}
-          />
-          <section data-scroll-section>
-          <div className={styles.container}>
-            <span className={styles.meta}>
-              {post.author.name} &middot;{' '}
-              <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-              {post.body.childMarkdownRemark.timeToRead} minute read
-            </span>
-            <div className={styles.article}>
-              <div
-                className={styles.body}
-                dangerouslySetInnerHTML={{
-                  __html: post.body.childMarkdownRemark.html,
-                }}
-              />
-              <Tags tags={post.tags} />
-              {(previous || next) && (
-                <nav>
-                  <ul className={styles.articleNavigation}>
-                    {previous && (
-                      <li>
-                        <Link to={`/blog/${previous.slug}`} rel="prev">
-                          ← {previous.title}
-                        </Link>
-                      </li>
-                    )}
-                    {next && (
-                      <li>
-                        <Link to={`/blog/${next.slug}`} rel="next">
-                          {next.title} →
-                        </Link>
-                      </li>
-                    )}
-                  </ul>
-                </nav>
-              )}
+            <Hero
+              image={post.heroImage.gatsbyImageData}
+              title={post.title}
+              content={post.description.childMarkdownRemark.excerpt}
+              author={post.author.name}
+              rawdate={post.rawDate}
+              publishdate={post.publishDate}
+              time={post.body.childMarkdownRemark.timeToRead}
+            />
+            <section data-scroll-section>
+            <div className={styles.container}>
+
+              <div className={styles.article}>
+                <div
+                  className={styles.body}
+                  dangerouslySetInnerHTML={{
+                    __html: post.body.childMarkdownRemark.html,
+                  }}
+                />
+                <Tags tags={post.tags} />
+                {(previous || next) && (
+                  <nav>
+                    <ul className={styles.articleNavigation}>
+                      {previous && (
+                        <li>
+                          <Link to={`/blog/${previous.slug}`} rel="prev">
+                            ← {previous.title}
+                          </Link>
+                        </li>
+                      )}
+                      {next && (
+                        <li>
+                          <Link to={`/blog/${next.slug}`} rel="next">
+                            {next.title} →
+                          </Link>
+                        </li>
+                      )}
+                    </ul>
+                  </nav>
+                )}
+              </div>
             </div>
-          </div>
-          </section>
+            </section>
 
-        </BlogLayout>
+          </BlogLayout>
         </ScrollProvider>
     )
   }

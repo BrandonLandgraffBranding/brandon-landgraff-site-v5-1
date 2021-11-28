@@ -4,7 +4,7 @@ import get from 'lodash/get'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
-import Hero from '../components/hero'
+import Hero from '../components/blogbanner/blogbanner'
 import ArticlePreview from '../components/article-preview'
 
 import ScrollProvider from '../components/locomotivescrollprovider'
@@ -17,7 +17,7 @@ class BlogIndex extends React.Component {
       <ScrollProvider>
         <Layout location={this.props.location}>
           <Seo title="Blog" />
-          <Hero title="Blog" />
+          <Hero />
           <ArticlePreview posts={posts} />
         </Layout>
       </ScrollProvider>

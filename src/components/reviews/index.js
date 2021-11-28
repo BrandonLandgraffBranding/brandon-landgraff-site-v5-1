@@ -32,15 +32,6 @@ const Reviewbar = () => {
         <div className='testimonials__section dark-bg'>
             <h4>TESTIMONIALS</h4>
             <Carousel />
-            <p
-            role="img"
-            aria-label=""
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="3"
-          >
-            👋
-          </p>
         </div>
       </div>
       <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 

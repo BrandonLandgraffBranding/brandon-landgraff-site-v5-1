@@ -1,5 +1,5 @@
 .meta {
-  font-family: var(--font-serif);
+  /* font-family: var(--font-serif);
   font-size: var(--text-lg);
   font-style: italic;
   margin: 0 auto 1em;
@@ -7,7 +7,8 @@
   padding-bottom: var(--size-gutter);
   padding-left: var(--size-gutter);
   position: relative;
-  top: -1em;
+  top: -1em; */
+  padding-left: 10%;
 }
 
 .article {

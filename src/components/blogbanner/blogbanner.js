@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-import './banner.css';
+import './blogbanner.css';
 
-const Banner = () => {
+const BlogBanner = () => {
 
     // Title Text Animation
     let app = useRef(null);
@@ -30,29 +30,29 @@ const Banner = () => {
         return (
         <section className='vh-100' data-scroll-section>
             <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-             data-scroll-id="#FCFCFC" />
+             data-scroll-id="#121212" />
             <div className='section__width' ref={el => app = el}>
-                <div className='banner-items'>
-                    <div className='hero-text-container'>
-                    <h5 className='banner-title'>WHY HELLO THERE!</h5>
-                    <div className='hero-content-inner' ref={el => content = el}>
-                        <h1 id="header-text" className='banner-subheader'>
+                <div className='blog-banner-items'>
+                    <div className='blog-hero-text-container'>
+                    <h5 className='blog-banner-title'>READ MY BLOG</h5>
+                    <div className='blog-hero-content-inner' ref={el => content = el}>
+                        <h1 id="blog-header-text" className='blog-banner-subheader'>
                             <div className='hero-content-line'>
-                                <div className='hero-content-line-inner'>I’m a Shopify</div>
+                                <div className='hero-content-line-inner'>Welcome</div>
                             </div>
                             <div className='hero-content-line'>
-                                <div className='hero-content-line-inner'>Focused</div>
+                                <div className='hero-content-line-inner'>To My</div>
                             </div>
                             <div className='hero-content-line'>
-                                <div className='hero-content-line-inner'>Full Stack</div>
+                                <div className='hero-content-line-inner'>Ideas 🧠</div>
                             </div>
                             <div className='hero-content-line'>
-                                <div className='hero-content-line-inner'>Designer</div>
+                                <div className='hero-content-line-inner'>&amp; Thoughts</div>
                             </div>
                         </h1>
                     </div>
-                    <p className='hero-paragraph'>
-                        My specialty is optimizing Shopify stores by designing and coding intuitive interfaces.
+                    <p className='blog-hero-paragraph'>
+                        In my blog I talk about Shopify specific topics such as branding, user experience, user interface, and web design techniques.
                     </p>
                     </div>
                     <div className='shapes float'>
@@ -69,4 +69,4 @@ const Banner = () => {
 
 }
 
-export default Banner
+export default BlogBanner

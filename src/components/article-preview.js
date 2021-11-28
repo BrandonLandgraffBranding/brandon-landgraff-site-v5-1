@@ -1,64 +1,39 @@
-import React, { useEffect, useRef } from 'react'
-// import gsap from 'gsap'
-// import ScrollTrigger from 'gsap/ScrollTrigger'
-// import cn from 'classnames';
+import React from 'react'
 
-// import SplitText from '../components/utils/Split3.min.js'
-// import useOnScreen from '../components/hooks/useOnScreen.js'
-
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-// import Container from './container'
+import Container from './container'
 
 import Tags from './tags'
-import * as styles from './article-preview.module.css'
+import './article-preview.css'
 
 const ArticlePreview = ({ posts }) => {
-
-
-  // Scroll Triggers
-  // const ref = useRef(null);
-
-  // useEffect(() => {
-  //   const sections = gsap.utils.toArray('.blog-item-wrapper');
-  //   gsap.to(sections, {
-  //     xPercent: -100 * (sections.length-1),
-  //     ease: 'none',
-  //     scrollTrigger:{
-  //       start: 'top top',
-  //       trigger: ReferenceError.current,
-  //     }
-
-  //   })
-
-  // }, []);
-
-  //ref={ref}
-
 
   // Adding Posts
   if (!posts) return null
   if (!Array.isArray(posts)) return null
 
   return (
-    <section className='blog-item-wrapper' data-scroll-section>
-    {/* <Container> */}
-      <ul className={styles.articleList}>
+    <section className='blog-item-wrapper vh-100' data-scroll-section>
+    <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+    data-scroll-id="#FCFCFC" />
+    <Container>
+      <ul className='article-list'>
         {posts.map((post) => {
           return (
-            <div>
+            <div className='blog-item'>
               <li key={post.slug}>
-                <Link to={`/blog/${post.slug}`} className={styles.link}>
+                <a href={`/blog/${post.slug}`} className='blog-link'>
                     <GatsbyImage alt="" image={post.heroImage.gatsbyImageData} data-scroll/>
                   <h2>{post.title}</h2>
-                </Link>
+                </a>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: post.description.childMarkdownRemark.html,
                   }}
                 />
-                <div className={styles.meta}>
+                <div className='meta'>
                   <small className="meta">{post.publishDate}</small>
                   <Tags tags={post.tags} />
                 </div>
@@ -67,7 +42,7 @@ const ArticlePreview = ({ posts }) => {
           )
         })}
       </ul>
-    {/* </Container> */}
+    </Container>
     </section>
   )
 }
