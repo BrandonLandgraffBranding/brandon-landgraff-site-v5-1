@@ -42,6 +42,8 @@ const Footer = () => {
 
   return (
   <section className={cn('footer-section vh-100')} data-scroll-section>
+    <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+    data-scroll-id="#FFFFFF" />
     <Container>
       <h5 id='ask-for-availability'><a href="mailto:hello@brandonlandgraff.com">Say Hello 👋</a></h5>
       <div className='two-column'>
@@ -62,8 +64,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-    data-scroll-id="#FFFFFF" />
       <p id='credit'><strong>©Brandon Landgraff</strong></p>
     </Container>
   </section>

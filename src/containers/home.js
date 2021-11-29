@@ -3,6 +3,7 @@ import React from 'react';
 import Banner from '../components/banner';
 import Reviews from '../components/reviews';
 import Bio from '../components/bio';
+import Stats from '../components/stats';
 import Capabilities from '../components/capabilities';
 import Faq from '../components/accordion';
 
@@ -18,6 +19,7 @@ const Home = () => {
             <Banner />
             <Reviews />
             <Bio />
+            <Stats />
             <Capabilities />
             <Faq />
           </Layout>  

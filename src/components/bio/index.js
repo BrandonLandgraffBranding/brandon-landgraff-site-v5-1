@@ -3,7 +3,6 @@ import gsap from 'gsap'
 import SplitText from '../../components/utils/Split3.min.js'
 import cn from 'classnames';
 import useOnScreen from '../../components/hooks/useOnScreen.js'
-import { useCountUp } from 'react-countup'
 
 import Container from '../container';
 
@@ -12,17 +11,6 @@ import './bio.css'
 import Brandon from '../../images/brandon.webp'
 
 const Bio = () => {
-
-  //Count Up
-  const countUpRefExp = React.useRef(null);
-
-  const { start } = useCountUp({
-      ref: countUpRefExp,
-      duration: 1,
-      end: 22,
-      suffix: "+"
-      // startOnMount: true
-  });
 
   const ref = useRef();
   const [reveal, setReveal] = useState(false);
@@ -47,8 +35,6 @@ const Bio = () => {
         ease: "power2",
       });
 
-      start();
-
     }
   }, [reveal]);
   
@@ -69,7 +55,6 @@ const Bio = () => {
           <div className='bio__text_container'>
             <h4 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>INTRODUCTION</h4>
             <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>My name is Brandon Landgraff. 👋 I’m a solopreneur who builds brands and custom Shopify stores. It’s my job to use my creative capabilities to improve your store and drive sales.</h5>
-            <h5 ref={ref} id='count-up-text' className={cn({'is-reveal text-margin': reveal})}><span id='count-up' ref={countUpRefExp} /> Successful Projects Completed With Agencies and Clients</h5>
           </div>
         </div>
       </Container>

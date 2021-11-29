@@ -234,7 +234,7 @@ body{
   h4 {
     font-family: 'Poppins', sans-serif;
     font-size: 10px;
-    font-weight: 200;
+    font-weight: 500;
     letter-spacing: 0.8em;
     color: #4A4A4A;
   }
@@ -255,6 +255,10 @@ body{
     gap: 0px;
     grid-template-columns: auto;
   }
+}
+
+.chevron-prev {
+  transform: rotate(180deg);
 }
 
 /* Floating Shapes */

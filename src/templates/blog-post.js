@@ -8,6 +8,8 @@ import Hero from '../components/hero'
 import Tags from '../components/tags'
 import * as styles from './blog-post.module.css'
 
+import Chevron from '../components/dropdown/chevron.js'
+
 import ScrollProvider from '../components/locomotivescrollprovider'
 
 class BlogPostTemplate extends React.Component {
@@ -53,14 +55,14 @@ class BlogPostTemplate extends React.Component {
                       {previous && (
                         <li>
                           <Link to={`/blog/${previous.slug}`} rel="prev">
-                            ← {previous.title}
+                          <Chevron className='chevron-prev' width={14} fill={"#4A4A4A"} /> {previous.title}
                           </Link>
                         </li>
                       )}
                       {next && (
                         <li>
                           <Link to={`/blog/${next.slug}`} rel="next">
-                            {next.title} →
+                            {next.title} <Chevron className='chevron-next' width={14} fill={"#4A4A4A"} />
                           </Link>
                         </li>
                       )}

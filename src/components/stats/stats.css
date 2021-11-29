@@ -1,0 +1,30 @@
+/* id */
+
+#description-text div {
+    opacity: 0;
+}
+
+#description-text .isreveal div {
+    opacity: 1;
+}
+
+#count-up-text {
+    font-size: 240px;
+    font-weight: 200;
+    color: #4A4A4A;
+    line-height: 0.75em;
+}
+
+#count-up-text-description {
+    font-weight: 700;
+}
+
+/* class */
+
+.stats-section {
+    margin: 12vw 0 0 0;
+}
+
+.stats-container {
+    width: 80%;
+}

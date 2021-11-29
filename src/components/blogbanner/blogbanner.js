@@ -34,7 +34,7 @@ const BlogBanner = () => {
             <div className='section__width' ref={el => app = el}>
                 <div className='blog-banner-items'>
                     <div className='blog-hero-text-container'>
-                    <h5 className='blog-banner-title'>READ MY BLOG</h5>
+                    <h4 className='blog-banner-title'>READ MY BLOG</h4>
                     <div className='blog-hero-content-inner' ref={el => content = el}>
                         <h1 id="blog-header-text" className='blog-banner-subheader'>
                             <div className='hero-content-line'>
