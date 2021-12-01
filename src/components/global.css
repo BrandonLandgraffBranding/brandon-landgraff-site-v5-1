@@ -14,8 +14,6 @@ body {
   margin: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  margin: 0;
-  padding: 0;
 }
 
 img {
@@ -203,6 +201,11 @@ body{
   align-items: center;
 }
 
+/* Section Height */
+.section-height {
+  padding: 12vw 0 12vw 0;
+}
+
 /* Header and Subheader Custom Styling */
 .text-margin {
   margin-top: 16px;
@@ -255,6 +258,11 @@ body{
     gap: 0px;
     grid-template-columns: auto;
   }
+
+  .section-height {
+    padding: 18vw 0 18vw 0;
+  }
+  
 }
 
 .chevron-prev {

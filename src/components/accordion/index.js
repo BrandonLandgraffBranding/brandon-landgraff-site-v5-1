@@ -42,11 +42,11 @@ const FAQ = () => {
   
   return (
     <section className={cn('bio-section vh-100')} data-scroll-section>
-      <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-             data-scroll-id="#121212" />
       <Container>
-        <div className='two-column dark-bg'>
+        <div className='two-column section-height dark-bg'>
           <div>
+          <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+             data-scroll-id="#121212" />
             <h4 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>FREQUENTLY ASKED QUESTIONS</h4>
             <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>Have questions you want to ask me?</h5>
           </div>

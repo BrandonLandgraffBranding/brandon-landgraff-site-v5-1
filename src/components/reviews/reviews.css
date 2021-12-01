@@ -4,18 +4,8 @@
     background-color: transparent;
 }
 
-.testimonials__section {
-    padding: 0vw 0 16vw 0;
+.testimonials-section {
     text-align: center;
-}
-
-.activeReview {
-    transition: background-color 2s ease;
-    background-color: black;
-}
-
-.activeReview {
-    color: #FFFFFF;
 }
 
 /* Carousel Styling */
@@ -41,10 +31,6 @@
 @media only screen and (max-width: 768px) {
     .carousel-cell-inner {
         width: 80%;
-    }
-
-    .testimonials__section {
-        padding: 0vw 0 12vw 0;
     }
 
     .carousel-cell {

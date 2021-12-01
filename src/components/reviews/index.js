@@ -28,14 +28,14 @@ function Carousel () {
 const Reviewbar = () => {
   return (
     <section className='vh-100' data-scroll-section>
-      <div className='reviewbar'>
-        <div className='testimonials__section dark-bg'>
+      <div className='section-height'>
+      <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+      data-scroll-id="#1C1C1C" />
+        <div className='testimonials-section dark-bg'>
             <h4>TESTIMONIALS</h4>
             <Carousel />
         </div>
       </div>
-      <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-      data-scroll-id="#1C1C1C" />
     </section>
   )
 }

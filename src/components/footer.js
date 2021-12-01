@@ -41,7 +41,7 @@ const Footer = () => {
   }, [reveal]);
 
   return (
-  <section className={cn('footer-section vh-100')} data-scroll-section>
+  <section className={cn('footer-section section-height vh-100')} data-scroll-section>
     <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
     data-scroll-id="#FFFFFF" />
     <Container>
@@ -66,6 +66,8 @@ const Footer = () => {
       </div>
       <p id='credit'><strong>©Brandon Landgraff</strong></p>
     </Container>
+    <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+    data-scroll-id="#F9F9F9" />
   </section>
   )
 }

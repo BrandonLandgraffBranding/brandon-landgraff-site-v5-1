@@ -52,13 +52,15 @@ const Stats = () => {
   
 
   return (
-    <section className={cn('bio-section')} data-scroll-section>
+    <section className={cn('bio-section vh-100')} data-scroll-section>
       <Container>
-        <div className='two-column dark-bg'>
+        <div className='two-column section-height dark-bg'>
           <div className='stats-container'>
+          <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+          data-scroll-id="#EDEDED" />
               <>
               <h4 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>EXPERIENCE</h4>
-              <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>I've completed a wide range of projects using the following tools:</h5>
+              <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin stats-title': reveal})}>I've completed a wide range of projects using the following tools:</h5>
               {/* <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>Adobe Illustrator</h5>
               <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>Adobe XD</h5>
               <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>HTML</h5>

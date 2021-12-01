@@ -19,6 +19,12 @@
     font-weight: 700;
 }
 
+/* Classes */
+
+.stats-title {
+    color: #4A4A4A;
+}
+ 
 /* class */
 
 .stats-section {

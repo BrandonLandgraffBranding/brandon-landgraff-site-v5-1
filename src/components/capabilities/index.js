@@ -40,9 +40,11 @@ const Capabilities = () => {
     }, [reveal]);
   
   return (
-    <section className={cn('capabilities-section')} data-scroll-section>
+    <section className={cn('capabilities-section section-height vh-100 dark-bg')} data-scroll-section>
+      <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+      data-scroll-id="#111111" />
       <Container>
-        <div className='two-column dark-bg'>
+        <div className='two-column'>
           <div className='capabilities-explain'>
             <h4 ref={ref} id='capabilities-text' className={cn({'is-reveal text-margin': reveal})}>MY CAPABILITIES</h4>
             <h5 ref={ref} id='capabilities-text' className={cn({'is-reveal text-margin': reveal})}>I can change any design element in a shopify store. I'm a multidisciplinary individual who offers multiple skills sets but thinks about projects more holistically and comprehensively.</h5> 

@@ -40,10 +40,12 @@ const Bio = () => {
   
 
   return (
-    <section className={cn('bio-section')} data-scroll-section>
+    <section className={cn('bio-section vh-100')} data-scroll-section>
       <Container>
-        <div className='two-column vh-100 dark-bg'>
+        <div className='two-column section-height dark-bg'>
           <div className='bio__container'>
+          <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+          data-scroll-id="#191919" />
               <>
                 <div className='img__container'>
                 <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
