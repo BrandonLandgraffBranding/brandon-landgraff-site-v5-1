@@ -24,6 +24,7 @@ const Capabilities = () => {
 
     useEffect(() => {
       if(reveal){
+
         const split = new SplitText("#capabilities-text", {
           type: "lines",
         });
@@ -34,60 +35,93 @@ const Capabilities = () => {
           opacity: 1,
           stagger: 0.1,
           ease: "power2",
+          delay: 2,
         });
+
+        new SplitText("h4", { type: "lines", linesClass: "lineChild" });
+        new SplitText("h4", { type: "lines", linesClass: "lineParent" });
+        const tl = gsap.timeline();
+        tl.from(".lineChild", {y:20, stagger:0.25});
 
       }
     }, [reveal]);
+
+        //Reveal Second Animation
+        const refsecond = useRef();
+
+        const [revealsecond, setSecondReveal] = useState(false);
+    
+        const onSecondScreen = useOnScreen(refsecond);
+    
+        useEffect(()=>{
+          if(onSecondScreen) setSecondReveal(onSecondScreen);
+        }, [onSecondScreen]);
+    
+        useEffect(() => {
+          if(revealsecond){
+    
+            const split = new SplitText("#second-text", {
+              type: "lines",
+            });
+    
+            gsap.to(split.lines, {
+              duration: 1,
+              y: -50,
+              opacity: 1,
+              stagger: 0.5,
+              ease: "power2",
+              delay: 1,
+            });
+    
+          }
+        }, [revealsecond]);
   
   return (
-    <section className={cn('capabilities-section section-height vh-100 dark-bg')} data-scroll-section>
+    <section ref={ref} className={cn('capabilities-section vh-100')} data-scroll-section>
       <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-      data-scroll-id="#111111" />
+      data-scroll-id="#EDEDED" />
       <Container>
-        <div className='two-column'>
-          <div className='capabilities-explain'>
-            <h4 ref={ref} id='capabilities-text' className={cn({'is-reveal text-margin': reveal})}>MY CAPABILITIES</h4>
-            <h5 ref={ref} id='capabilities-text' className={cn({'is-reveal text-margin': reveal})}>I can change any design element in a shopify store. I'm a multidisciplinary individual who offers multiple skills sets but thinks about projects more holistically and comprehensively.</h5> 
-          </div>
-          <div className='capabilities'>
-                  <div className='cabailities-container'>
-                      <div className='cabailities-column-a'>
-                          <div className='rotate'><h6>Start</h6></div>
-                          <div className='line-container'>
-                              <div className='line-div' data-scroll/>
-                          </div>
-                          <div className='rotate'><h6>Finish</h6></div>
-                      </div>
-                      <div className='cabailities-column-b'>
-                          <div className='capability-item'>
-                              <h2 ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>Brand Identity</h2>
-                              <p ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>Logo, Colour Palette, Patterns, Elements</p>
-                          </div>
-                          <div className='capability-item'>
-                              <h2 ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>Brand Identity</h2>
-                              <p ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>Logo, Colour Palette, Patterns, Elements</p>
-                          </div>
-                          <div className='capability-item'>
-                              <h2 ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>Brand Strategy</h2>
-                              <p ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>Positioning, Competitor Research, Brand Story</p>
-                          </div>
-                          <div className='capability-item'>
-                              <h2 ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>UX Design</h2>
-                              <p ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>User Research, Wireframing, Split Testing</p>
-                          </div>
-                          <div className='capability-item'>
-                              <h2 ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>UI Design</h2>
-                              <p ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>Interface Mockups, Layout, Graphic Design</p>
-                          </div>
-                          <div className='capability-item'>
-                              <h2 ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>Front End Dev</h2>
-                              <p ref={ref} id='capabilities-text' className={cn({'is-reveal': reveal})}>HTML, CSS, JavaScript, Liquid</p>
-                          </div>
-                      </div>
-                  </div>
+      <div>
+        <div className='line-container'>
+            <div className='line-div' data-scroll/>
+        </div>
+        <div>
+          <h4 className='section-title'>WHAT IS A FULL STACK DESIGNER?</h4>
+          <h4 className='section-part'>PART 01</h4>
+        </div>
+      </div>
+
+      <div className='section-height'>
+          <div className='text-explain'>
+            <h2 id='capabilities-text' className={cn({'is-reveal': reveal})}>A full stack designer is multidisciplinary individual who offers 
+            multiple skill sets but thinks about projects more holistically 
+            and comprehensively.</h2> 
           </div>
 
-        </div>
+                  <div ref={refsecond} className='cabailities-container'>
+                          <div className='capability-item'>
+                              <h3 id='second-text' className={cn({'is-reveal': reveal})}>Brand Identity</h3>
+                              <p id='second-text' className={cn({'is-reveal': reveal})}>Logo, Colour Palette, Patterns, Elements</p>
+                          </div>
+                          <div className='capability-item'>
+                              <h3 id='second-text' className={cn({'is-reveal': reveal})}>Brand Strategy</h3>
+                              <p id='second-text' className={cn({'is-reveal': reveal})}>Positioning, Competitor Research, Brand Story</p>
+                          </div>
+                          <div className='capability-item'>
+                              <h3 id='second-text' className={cn({'is-reveal': reveal})}>UX Design</h3>
+                              <p id='second-text' className={cn({'is-reveal': reveal})}>User Research, Wireframing, Split Testing</p>
+                          </div>
+                          <div className='capability-item'>
+                              <h3 id='second-text' className={cn({'is-reveal': reveal})}>UI Design</h3>
+                              <p id='second-text' className={cn({'is-reveal': reveal})}>Interface Mockups, Layout, Graphic Design</p>
+                          </div>
+                          <div className='capability-item'>
+                              <h3 id='second-text' className={cn({'is-reveal': reveal})}>Front End Dev</h3>
+                              <p id='second-text' className={cn({'is-reveal': reveal})}>HTML, CSS, JavaScript, Liquid</p>
+                          </div>
+                      </div>
+      </div>
+
         </Container>
     </section>
   )

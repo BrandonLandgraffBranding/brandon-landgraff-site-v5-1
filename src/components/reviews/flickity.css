@@ -98,11 +98,11 @@ https://flickity.metafizzy.co
     width: 10px;
     height: 10px;
     margin: 0 8px;
-    background: #2F2F2F;
+    background: #FCFCFC;
     border-radius: 50%;
     cursor: pointer;
   }
   
   .flickity-page-dots .dot.is-selected {
-    background: #E5E5E5;
+    background: #2F2F2F;
   }

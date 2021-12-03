@@ -45,6 +45,11 @@ const Stats = () => {
         ease: "power2",
       });
 
+      new SplitText("h4", { type: "lines", linesClass: "lineChild" });
+      new SplitText("h4", { type: "lines", linesClass: "lineParent" });
+      const tl = gsap.timeline();
+      tl.from(".lineChild", {y:20, stagger:0.25});
+
       start();
 
     }
@@ -52,26 +57,25 @@ const Stats = () => {
   
 
   return (
-    <section className={cn('bio-section vh-100')} data-scroll-section>
+    <section ref={ref} className={cn('bio-section vh-100')} data-scroll-section>
       <Container>
-        <div className='two-column section-height dark-bg'>
+        <div>
+          <div className='line-container'>
+              <div className='line-div' data-scroll/>
+          </div>
+          <div>
+            <h4 className='section-title'>WHAT IS MY EXPERIENCE?</h4>
+            <h4 className='section-part'>PART 05</h4>
+          </div>
+        </div>
+        <div className='two-column section-height'>
           <div className='stats-container'>
-          <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-          data-scroll-id="#EDEDED" />
-              <>
-              <h4 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>EXPERIENCE</h4>
-              <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin stats-title': reveal})}>I've completed a wide range of projects using the following tools:</h5>
-              {/* <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>Adobe Illustrator</h5>
-              <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>Adobe XD</h5>
-              <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>HTML</h5>
-              <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>CSS</h5>
-              <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>JavaScript</h5>
-              <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>Liquid</h5>
-              <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>Etc...</h5> */}
-              </>
+            <div className='text-explain'>
+              <h2 id="stats-text" className={cn({'is-reveal text-margin stats-title': reveal})}>I've completed a wide range of projects using CSS, HTML, JavaScript, Liquid, Adobe Illustrator, Adobe XD to improve Shopify stores.</h2>
+            </div>
           </div>
           <div className='stats-text-container'>
-            <h5 ref={ref} id='count-up-text' className={cn({'is-reveal text-margin': reveal})}><span id='count-up' ref={countUpRefExp} /></h5>
+            <h5 id='count-up-text' className={cn({'is-reveal text-margin': reveal})}><span id='count-up' ref={countUpRefExp} /></h5>
             <p id='count-up-text-description'> Years Of Experience</p>
           </div>
         </div>

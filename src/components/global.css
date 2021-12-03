@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 html * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #FCFCFC;
-  color: var(--text-color);
-  font-family: var(--font-sans);
+  background-color: #EDEDED;
+  color: #1C1C1C;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  font-weight: var(--body);
+  font-weight: 500;
   line-height: var(--default);
   margin: 0;
   text-rendering: optimizeLegibility;
@@ -22,16 +23,18 @@ img {
 }
 
 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 60px;
   font-weight: 500;
   color: #1C1C1C;
+  z-index: 100;
 }
 
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 400;
+  z-index: 100;
 }
 
 h3 {
@@ -39,26 +42,30 @@ h3 {
   font-size: 12px;
   font-weight: 600;
   color: #1C1C1C;
+  z-index: 100;
 }
 
 h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.2em;
   color: #4A4A4A;
+  z-index: 100;
 }
 
 h5 {
   font-family: 'Poppins', sans-serif;
   font-size: 22px;
   font-weight: 500;
+  z-index: 100;
 }
 
 p {
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
   font-weight: 500;
+  z-index: 100;
 }
 
 /* a {
@@ -199,6 +206,7 @@ body{
   gap: 48px;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  margin-top: 100px;
 }
 
 /* Section Height */
@@ -212,10 +220,27 @@ body{
   margin-bottom: 16px;
 }
 
+.text-explain h2 {
+  padding-top: 6vw;
+  font-size: 28px;
+  max-width: 80%;
+} 
+
+.section-part {
+  float: right;
+  max-width: 100px;
+}
+
+.section-title {
+  float: left;
+  max-width: 500px;
+}
+
+
 /* Mobile Optimized */
 @media only screen and (max-width: 768px) {
   h1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     font-size: 42px;
     font-weight: 500;
     color: #1C1C1C;
@@ -238,7 +263,7 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 10px;
     font-weight: 500;
-    letter-spacing: 0.8em;
+    letter-spacing: 0.2em;
     color: #4A4A4A;
   }
   
@@ -262,6 +287,22 @@ body{
   .section-height {
     padding: 18vw 0 18vw 0;
   }
+
+  .text-explain h2 {
+    padding-top: 12vw;
+    font-size: 18px;
+    max-width: 100%;
+  } 
+
+  .section-part {
+    float: right;
+    max-width: 50px;
+  }
+  
+  .section-title {
+    float: left;
+    max-width: 250px;
+  }
   
 }
 
@@ -271,7 +312,6 @@ body{
 
 /* Floating Shapes */
 .shapes .sqare { 
-  z-index: -1;
   position: absolute; 
   top: -400px;
   left: 50px;
@@ -279,6 +319,7 @@ body{
   height: 480px; 
   background-color: #E2A400;
   filter: blur(16px);
+  z-index: -100;
 }
 
 .shapes .circle { 
@@ -290,6 +331,7 @@ body{
   border-radius: 0 350px 350px 0;
   background-color: #E2A400;
   filter: blur(16px);
+  z-index: -100;
 }
 
 .shapes .triangle {
@@ -301,6 +343,7 @@ body{
   border-radius: 0 350px 350px 0;
   background-color: #E2A400;
   filter: blur(16px);
+  z-index: -100;
 }
 
 .float {
@@ -357,24 +400,24 @@ body{
 @media only screen and (max-width: 768px) {
   .shapes .sqare { 
     top: -400px;
-    left: 20px;
-    width: 60px; 
-    height: 240px; 
+    left: 0px;
+    width: 75px; 
+    height: 300px; 
   }
   
   .shapes .circle { 
     position: absolute; 
     top: -250px;
-    left: 100px;
-    width: 118px; 
-    height: 177px; 
+    left: 125px;
+    width: 148px; 
+    height: 221px; 
   }
   
   .shapes .triangle {
     top: -450px;
-    left: 150px;
-    width: 75px; 
-    height: 113px; 
+    left: 200px;
+    width: 94px; 
+    height: 141px; 
   }
 
 }

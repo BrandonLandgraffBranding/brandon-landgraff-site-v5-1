@@ -1,10 +1,10 @@
 /* id */
 
-#description-text div {
+#stats-text div {
     opacity: 0;
 }
 
-#description-text .isreveal div {
+#stats-text .isreveal div {
     opacity: 1;
 }
 
@@ -17,15 +17,14 @@
 
 #count-up-text-description {
     font-weight: 700;
+    color: #4A4A4A;
 }
 
 /* Classes */
 
-.stats-title {
+/* .stats-title {
     color: #4A4A4A;
-}
- 
-/* class */
+} 
 
 .stats-section {
     margin: 12vw 0 0 0;
@@ -34,3 +33,5 @@
 .stats-container {
     width: 80%;
 }
+*/
+

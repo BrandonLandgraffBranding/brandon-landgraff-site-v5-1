@@ -56,7 +56,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `poppins\:100, 200, 300, 400, 500, 600, 700, 800`
+          `poppins\:100, 200, 300, 400, 500, 600, 700, 800`,
+          `libre baskerville\: 400, 700`
         ]
       },
     },

@@ -12,52 +12,68 @@ import Brandon from '../../images/brandon.webp'
 
 const Bio = () => {
 
-  const ref = useRef();
-  const [reveal, setReveal] = useState(false);
+    //Reveal Animation
+    const ref = useRef();
 
-  const onScreen = useOnScreen(ref);
+    const [reveal, setReveal] = useState(false);
 
-  useEffect(()=>{
-    if(onScreen) setReveal(onScreen);
-  }, [onScreen]);
+    const onScreen = useOnScreen(ref);
 
-  useEffect(() => {
-    if(reveal){
-      const split = new SplitText("#description-text", {
-        type: "lines",
-      });
+    useEffect(()=>{
+      if(onScreen) setReveal(onScreen);
+    }, [onScreen]);
 
-      gsap.to(split.lines, {
-        duration: 2,
-        y: -20,
-        opacity: 1,
-        stagger: 0.1,
-        ease: "power2",
-      });
+    useEffect(() => {
+      if(reveal){
 
-    }
-  }, [reveal]);
+        new SplitText("h4", { type: "lines", linesClass: "lineChild" });
+        new SplitText("h4", { type: "lines", linesClass: "lineParent" });
+        const tl = gsap.timeline();
+        tl.from(".lineChild", {y:20, stagger:0.25});
+
+        const split = new SplitText("#bio-text", {
+          type: "lines",
+        });
+
+        gsap.to(split.lines, {
+          duration: 1,
+          y: -20,
+          opacity: 1,
+          stagger: 0.1,
+          ease: "power2",
+          delay: 2,
+        });
+
+      }
+    }, [reveal]);
   
 
   return (
-    <section className={cn('bio-section vh-100')} data-scroll-section>
+    <section ref={ref} className={cn('bio-section vh-100')} data-scroll-section>
       <Container>
-        <div className='two-column section-height dark-bg'>
-          <div className='bio__container'>
-          <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-          data-scroll-id="#191919" />
+        <div>
+          <div className='line-container'>
+              <div className='line-div' data-scroll/>
+          </div>
+          <div>
+            <h4 className='section-title'>WHAT IS A FULL STACK DESIGNER?</h4>
+            <h4 className='section-part'>PART 01</h4>
+          </div>
+        </div>
+
+        <div>
+        <div className='two-column section-height'>
+          <div className='bio-container'>
               <>
-                <div className='img__container'>
-                <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-             data-scroll-id="#121212" />
+                <div className='img-container'>
                     <img src={Brandon} alt="Brandon Landgraff" data-scroll/>
                 </div>
               </>
           </div>
-          <div className='bio__text_container'>
-            <h4 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>INTRODUCTION</h4>
-            <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>My name is Brandon Landgraff. 👋 I’m a solopreneur who builds brands and custom Shopify stores. It’s my job to use my creative capabilities to improve your store and drive sales.</h5>
+          <div className='text-explain'>
+            <h2 id="bio-text" className={cn({'is-reveal text-margin': reveal})}>My name is Brandon Landgraff. 👋 I’m a solopreneur who builds brands and custom Shopify stores. It’s my job to use my creative capabilities to improve your store and drive sales.</h2>
           </div>
+        </div>
         </div>
       </Container>
      </section>

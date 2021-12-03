@@ -23,7 +23,7 @@ const Accordion = (props) => {
           <div className='accordion-section dark-bg'>
                   <button className={`faq-accordion ${setActive}`} onClick={toggleAccordion}> 
                       <p className='accordion-title'>{props.title}</p>
-                      <Chevron className={`${setRotate}`} width={14} fill={"#FCFCFC"} />
+                      <Chevron className={`${setRotate}`} width={14} fill={"#1C1C1C"} />
                   </button>
                   <div ref={content} style={{maxHeight: `${setHeight}`}} className='accordion-content'>
                   <div

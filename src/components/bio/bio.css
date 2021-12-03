@@ -1,14 +1,15 @@
-.bio__text_container {
+/* .bio__text_container {
  margin-right: 4vw;
-}
+} */
 
-.img__container {
+.img-container {
     width: 100%;
     position: relative;
     overflow: hidden;
+    opacity: 0.7;
 }
 
-.img__container img {
+.img-container img {
     clip-path: inset(100% 0% 0% 0%);
     transition: clip-path 2s cubic-bezier(0.77, 0, 0.75, 1);
 }
@@ -17,15 +18,15 @@ img.is-reveal {
     clip-path: inset(0% 0% 0% 0%);
 }
 
-#description-text div {
+#bio-text div {
     opacity: 0;
 }
 
-#description-text .isreveal div {
+#bio-text .isreveal div {
     opacity: 1;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .main {
       display: grid;
       grid-template-columns: 1fr;
@@ -34,7 +35,7 @@ img.is-reveal {
     .bio__text_container {
         padding-top: 32px;
     }
-  }
+  } */
 
 
 

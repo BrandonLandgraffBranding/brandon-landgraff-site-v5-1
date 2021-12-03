@@ -17,10 +17,10 @@ const Home = () => {
         <ScrollProvider>
           <Layout>
             <Banner />
+            <Capabilities />
             <Reviews />
             <Bio />
             <Stats />
-            <Capabilities />
             <Faq />
           </Layout>  
         </ScrollProvider> 

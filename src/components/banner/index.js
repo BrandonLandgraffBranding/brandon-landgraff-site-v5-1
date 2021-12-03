@@ -1,72 +1,56 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import React, { useEffect, useRef, useState } from 'react'
+import gsap from 'gsap'
+import SplitText from '../../components/utils/Split3.min.js'
+import cn from 'classnames';
+import useOnScreen from '../../components/hooks/useOnScreen.js'
 
 import './banner.css';
 
+import Container from '../container';
+
 const Banner = () => {
 
-    // Title Text Animation
-    let app = useRef(null);
-    let content = useRef(null);
+    //Reveal Animation
+    const ref = useRef();
+
+    const [reveal, setReveal] = useState(false);
+
+    const onScreen = useOnScreen(ref);
 
     useEffect(()=>{
-        //Content vars
-        const headlineFirst = content.children[0].children[0];
-        const headlineSecond = headlineFirst.nextSibling;
-        const headlineThird = headlineSecond.nextSibling;
-        const headlineFourth = headlineThird.nextSibling;
+      if(onScreen) setReveal(onScreen);
+    }, [onScreen]);
 
-        //Content Animation
-        gsap.to([headlineFirst.children, headlineSecond.children, headlineThird.children, headlineFourth.children], {
-            y: 62,
-            stagger: { // wrap advanced options in an object
-                each: 0.3,
-                ease: "power3.easeOut"
-            }
-        });
+    useEffect(() => {
+      if(reveal){
 
-    })
+        new SplitText("h1", { type: "lines", linesClass: "lineChild" });
+        new SplitText("h1", { type: "lines", linesClass: "lineParent" });
+        const tl = gsap.timeline();
+        tl.from(".lineChild", {y:180, delay:1, stagger:0.5});
+
+
+      }
+    }, [reveal]);
 
         return (
-        <section className='vh-100' data-scroll-section>
-            <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-             data-scroll-id="#FCFCFC" />
-            <div className='section__width' ref={el => app = el}>
-                <div className='banner-items'>
-                    <div className='hero-text-container'>
-                    <h4 className='banner-title'>WHY HELLO THERE!</h4>
-                    <div className='hero-content-inner' ref={el => content = el}>
-                        <h1 id="header-text" className='banner-subheader'>
-                            <div className='hero-content-line'>
-                                <div className='hero-content-line-inner'>I’m a Shopify</div>
-                            </div>
-                            <div className='hero-content-line'>
-                                <div className='hero-content-line-inner'>Focused</div>
-                            </div>
-                            <div className='hero-content-line'>
-                                <div className='hero-content-line-inner'>Full Stack</div>
-                            </div>
-                            <div className='hero-content-line'>
-                                <div className='hero-content-line-inner'>Designer</div>
-                            </div>
-                        </h1>
+        <section className={cn('banner-section vh-100 dark-bg')} data-scroll-section>
+                    <div className='shapes-wrapper'>
+                        <div className='shapes float'>
+                            <div className='sqare spin'></div>
+                            <div className='circle '></div>
+                            <div className='triangle spin-top'></div>
+                        </div>
                     </div>
-                    <h2 className='hero-paragraph'>
-                        My specialty is optimizing Shopify stores by designing and coding intuitive interfaces.
-                    </h2>
+                <Container>
+                <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+                data-scroll-id="#1C1C1C" />
+                    <div className='banner-text-wrapper'>
+                        <h1 ref={ref} id="banner-text" className={cn({'is-reveal': reveal})}>Full Stack Shopify Designer</h1>
                     </div>
-                    <div className='shapes float'>
-                        <div className='sqare spin'></div>
-                        <div className='circle '></div>
-                        <div className='triangle spin-top'></div>
-                    </div>
-                </div>
-
-
-            </div>
+                </Container>
         </section>
         )
-
 }
 
 export default Banner

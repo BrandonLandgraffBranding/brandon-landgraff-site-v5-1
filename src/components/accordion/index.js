@@ -37,18 +37,29 @@ const FAQ = () => {
           ease: "power2",
         });
 
+        new SplitText("h4", { type: "lines", linesClass: "lineChild" });
+        new SplitText("h4", { type: "lines", linesClass: "lineParent" });
+        const tl = gsap.timeline();
+        tl.from(".lineChild", {y:20, stagger:0.25});
+
       }
     }, [reveal]);
   
   return (
-    <section className={cn('bio-section vh-100')} data-scroll-section>
+    <section ref={ref} className={cn('acc-section vh-100')} data-scroll-section>
       <Container>
-        <div className='two-column section-height dark-bg'>
+        <div>
+          <div className='line-container'>
+              <div className='line-div' data-scroll/>
+          </div>
           <div>
-          <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-             data-scroll-id="#121212" />
-            <h4 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>FREQUENTLY ASKED QUESTIONS</h4>
-            <h5 ref={ref} id="description-text" className={cn({'is-reveal text-margin': reveal})}>Have questions you want to ask me?</h5>
+            <h4 className='section-title'>WHAT IS A FULL STACK DESIGNER?</h4>
+            <h4 className='section-part'>PART 01</h4>
+          </div>
+        </div>
+        <div className='two-column section-height'>
+          <div className='text-explain'>
+            <h2 id="description-text" className={cn({'is-reveal text-margin': reveal})}>Have questions you want to ask me?</h2>
           </div>
           <div>
             <Accordion
