@@ -38,11 +38,6 @@ const Capabilities = () => {
           delay: 2,
         });
 
-        new SplitText("h4", { type: "lines", linesClass: "lineChild" });
-        new SplitText("h4", { type: "lines", linesClass: "lineParent" });
-        const tl = gsap.timeline();
-        tl.from(".lineChild", {y:20, stagger:0.25});
-
       }
     }, [reveal]);
 
@@ -75,10 +70,33 @@ const Capabilities = () => {
     
           }
         }, [revealsecond]);
+
+
+        //Reveal Subheader Animation
+        const refSubheader = useRef();
+
+        const [revealSubheader, setSubheaderReveal] = useState(false);
+    
+        const onSubheaderScreen = useOnScreen(refSubheader);
+    
+        useEffect(()=>{
+          if(onSubheaderScreen) setSubheaderReveal(onSubheaderScreen);
+        }, [onSubheaderScreen]);
+    
+        useEffect(() => {
+          if(revealSubheader){
+    
+            new SplitText("h4", { type: "lines", linesClass: "lineChild" });
+            new SplitText("h4", { type: "lines", linesClass: "lineParent" });
+            const tl = gsap.timeline();
+            tl.from(".lineChild", {y:20, stagger:0.25});
+    
+          }
+        }, [revealSubheader]);
   
   return (
     <section ref={ref} className={cn('capabilities-section vh-100')} data-scroll-section>
-      <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+      <span ref={refSubheader} data-scroll data-scroll-repeat data-scroll-call="pageColor" 
       data-scroll-id="#EDEDED" />
       <Container>
       <div>
@@ -97,8 +115,7 @@ const Capabilities = () => {
             multiple skill sets but thinks about projects more holistically 
             and comprehensively.</h2> 
           </div>
-
-                  <div ref={refsecond} className='cabailities-container'>
+            <div ref={refsecond} className='cabailities-container'>
                           <div className='capability-item'>
                               <h3 id='second-text' className={cn({'is-reveal': reveal})}>Brand Identity</h3>
                               <p id='second-text' className={cn({'is-reveal': reveal})}>Logo, Colour Palette, Patterns, Elements</p>
@@ -119,9 +136,8 @@ const Capabilities = () => {
                               <h3 id='second-text' className={cn({'is-reveal': reveal})}>Front End Dev</h3>
                               <p id='second-text' className={cn({'is-reveal': reveal})}>HTML, CSS, JavaScript, Liquid</p>
                           </div>
-                      </div>
-      </div>
-
+              </div>
+            </div>
         </Container>
     </section>
   )

@@ -54,10 +54,33 @@ const Stats = () => {
 
     }
   }, [reveal]);
+
+          //Reveal Subheader Animation
+          const refSubheader = useRef();
+
+          const [revealSubheader, setSubheaderReveal] = useState(false);
+      
+          const onSubheaderScreen = useOnScreen(refSubheader);
+      
+          useEffect(()=>{
+            if(onSubheaderScreen) setSubheaderReveal(onSubheaderScreen);
+          }, [onSubheaderScreen]);
+      
+          useEffect(() => {
+            if(revealSubheader){
+      
+              new SplitText("h4", { type: "lines", linesClass: "lineChild" });
+              new SplitText("h4", { type: "lines", linesClass: "lineParent" });
+              const tl = gsap.timeline();
+              tl.from(".lineChild", {y:20, stagger:0.25});
+      
+            }
+          }, [revealSubheader]);
   
 
   return (
     <section ref={ref} className={cn('bio-section vh-100')} data-scroll-section>
+      <span ref={refSubheader} />
       <Container>
         <div>
           <div className='line-container'>
@@ -65,7 +88,7 @@ const Stats = () => {
           </div>
           <div>
             <h4 className='section-title'>WHAT IS MY EXPERIENCE?</h4>
-            <h4 className='section-part'>PART 05</h4>
+            <h4 className='section-part'>PART 04</h4>
           </div>
         </div>
         <div className='two-column section-height'>

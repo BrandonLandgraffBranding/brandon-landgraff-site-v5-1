@@ -37,30 +37,31 @@ function Carousel () {
 
 const Reviewbar = () => {
 
-    //Reveal Animation
-    const ref = useRef();
+        //Reveal Subheader Animation
+        const refSubheader = useRef();
 
-    const [reveal, setReveal] = useState(false);
-  
-    const onScreen = useOnScreen(ref);
-  
-    useEffect(()=>{
-      if(onScreen) setReveal(onScreen);
-    }, [onScreen]);
-  
-    useEffect(() => {
-      if(reveal){
-  
-        new SplitText("h4", { type: "lines", linesClass: "lineChild" });
-        new SplitText("h4", { type: "lines", linesClass: "lineParent" });
-        const tl = gsap.timeline();
-        tl.from(".lineChild", {y:20, stagger:0.25});
-  
-      }
-    }, [reveal]);
+        const [revealSubheader, setSubheaderReveal] = useState(false);
+    
+        const onSubheaderScreen = useOnScreen(refSubheader);
+    
+        useEffect(()=>{
+          if(onSubheaderScreen) setSubheaderReveal(onSubheaderScreen);
+        }, [onSubheaderScreen]);
+    
+        useEffect(() => {
+          if(revealSubheader){
+    
+            new SplitText("h4", { type: "lines", linesClass: "lineChild" });
+            new SplitText("h4", { type: "lines", linesClass: "lineParent" });
+            const tl = gsap.timeline();
+            tl.from(".lineChild", {y:20, stagger:0.25});
+    
+          }
+        }, [revealSubheader]);
 
   return (
-    <section ref={ref} className='vh-100' data-scroll-section>
+    <section className='vh-100' data-scroll-section>
+      <span ref={refSubheader} />
       <Container>
       <div>
         <div className='line-container'>
@@ -68,7 +69,7 @@ const Reviewbar = () => {
         </div>
         <div>
           <h4 className='section-title'>WHAT CLIENTS SAY ABOUT ME!</h4>
-          <h4 className='section-part'>PART 01</h4>
+          <h4 className='section-part'>PART 02</h4>
         </div>
       </div>
         <div className='section-height'>
