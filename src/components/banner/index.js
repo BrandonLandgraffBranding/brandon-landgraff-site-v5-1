@@ -26,8 +26,8 @@ const Banner = () => {
 
         new SplitText("h1", { type: "lines", linesClass: "lineChild" });
         new SplitText("h1", { type: "lines", linesClass: "lineParent" });
-        const tl = gsap.timeline();
-        tl.from(".lineChild", {y:180, delay:1, stagger:0.5});
+        const tl = gsap.timeline(); 
+        tl.from(".lineChild", {y:250, delay:1, stagger:0.5});
 
 
       }

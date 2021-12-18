@@ -6,7 +6,7 @@
   
   /* Style the buttons that are used to open and close the accordion panel */
   .faq-accordion {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0);
     color: #1C1C1C;
     cursor: pointer;
     padding: 12px 0 12px 0;

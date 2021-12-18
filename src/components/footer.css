@@ -53,8 +53,8 @@
 }
 
 #ask-for-availability {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 140px;
+  /* font-family: 'Libre Baskerville', serif;*/
+  font-size: 100px; 
   color: #1C1C1C;
   line-height: 1.2em;
 }
@@ -74,6 +74,12 @@
   color: #2F2F2F;
 }
 
+@media only screen and (max-width: 900px) {
+  #ask-for-availability {
+    font-size: 70px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   #stay-updated {
     padding-left: 0px;
@@ -84,3 +90,10 @@
   }
 
 }
+
+@media only screen and (max-width: 500px) {
+  #ask-for-availability {
+    font-size: 50px;
+  }
+}
+

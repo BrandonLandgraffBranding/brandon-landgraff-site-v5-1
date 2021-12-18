@@ -46,12 +46,12 @@ const Footer = () => {
     data-scroll-id="#FFFFFF" />
     <Container>
         <h5 id='ask-for-availability'><a href="mailto:hello@brandonlandgraff.com">Say Hello 👋</a></h5>
+        <div className='line-container'>
+              <div className='line-div' data-scroll/>
+          </div>
       <div className='two-column'>
         <div className='footer-information'>
         <img id='footer-logo' src={Logo} alt="Brandon Landgraff Logo"/>
-          <div className='text-explain'>
-            <h2 ref={ref} id="footer-text" className={cn({'is-reveal text-margin': reveal})}>Send me a quick message to set up a meeting or follow me on social media.</h2>
-          </div>
         </div>
         <div className='sm-container'>
           <p id='stay-updated'><strong>Stay Updated</strong></p>

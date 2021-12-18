@@ -1,56 +1,56 @@
-const path = require('path')
+const path = require(`path`);
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
+ // Query for nodes to use in creating pages.
+ resolve(
+   graphql(request).then(result => {
+     if (result.errors) {
+       reject(result.errors)
+     }
+     return result;
+   })
+ )
+});
 
-  // Define a template for blog post
-  const blogPost = path.resolve('./src/templates/blog-post.js')
+// Implement the Gatsby API "createPages". This is called once the
+// data layer is bootstrapped to let plugins create pages from data.
+exports.createPages = ({ actions, graphql }) => {
+ const { createPage } = actions;
 
-  const result = await graphql(
-    `
-      {
-        allContentfulBlogPost {
-          nodes {
-            title
-            slug
-          }
-        }
-      }
-    `
-  )
+// Create pages for each blog.
+ const getBlog = makeRequest(graphql, `
+   {
+     allContentfulBlog (
+       sort: { fields: [createdAt], order: DESC }
+       filter: {
+         node_locale: {eq: "en-US"}},)
+     {
+       edges {
+         node {
+           id
+           slug
+         }
+       }
+     }
+   }
+   `).then(result => {
+   result.data.allContentfulBlog.edges.forEach(({ node }) => {
+     createPage({
+       path: `project/${node.slug}`,
+       component: path.resolve(`src/templates/project.js`),
+       context: {
+         id: node.id,
+       },
+     })
+   })
+});
 
-  if (result.errors) {
-    reporter.panicOnBuild(
-      `There was an error loading your Contentful posts`,
-      result.errors
-    )
-    return
-  }
 
-  const posts = result.data.allContentfulBlogPost.nodes
+ return Promise.all([
+   getBlog
+  ])
+};
 
-  // Create blog posts pages
-  // But only if there's at least one blog post found in Contentful
-  // `context` is available in the template as a prop and as a variable in GraphQL
-
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostSlug = index === 0 ? null : posts[index - 1].slug
-      const nextPostSlug =
-        index === posts.length - 1 ? null : posts[index + 1].slug
-
-      createPage({
-        path: `/blog/${post.slug}/`,
-        component: blogPost,
-        context: {
-          slug: post.slug,
-          previousPostSlug,
-          nextPostSlug,
-        },
-      })
-    })
-  }
-}
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html" || stage === "develop-html") {
@@ -66,3 +66,4 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     })
   }
 }
+

@@ -1,0 +1,30 @@
+.img-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.7;
+}
+
+/* .img-container img {
+    clip-path: inset(0% 0% 0% 0%);
+    clip-path: inset(100% 0% 0% 0%); 
+    transition: clip-path 2s cubic-bezier(0.77, 0, 0.75, 1);
+}
+
+img.is-reveal {
+    clip-path: inset(0% 0% 0% 0%);
+} */
+
+/* inset needs to be sent to 100% for .blog-img-container after data scroll is connected! */
+
+.blog-img-container {
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    clip-path: inset(0% 0% 0% 0%); 
+    transition: clip-path 2s cubic-bezier(0.77, 0, 0.75, 1);
+}
+
+.blog-img-container.is-reveal {
+    clip-path: inset(0% 0% 0% 0%);
+}

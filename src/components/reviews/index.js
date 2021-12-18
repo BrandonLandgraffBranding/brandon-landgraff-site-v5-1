@@ -1,7 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
-import gsap from 'gsap'
-import SplitText from '../../components/utils/Split3.min.js'
-import useOnScreen from '../../components/hooks/useOnScreen.js'
+import React from 'react'
 import Flickity from 'react-flickity-component'
 
 import Container from '../container';
@@ -36,40 +33,16 @@ function Carousel () {
   }
 
 const Reviewbar = () => {
-
-        //Reveal Subheader Animation
-        const refSubheader = useRef();
-
-        const [revealSubheader, setSubheaderReveal] = useState(false);
-    
-        const onSubheaderScreen = useOnScreen(refSubheader);
-    
-        useEffect(()=>{
-          if(onSubheaderScreen) setSubheaderReveal(onSubheaderScreen);
-        }, [onSubheaderScreen]);
-    
-        useEffect(() => {
-          if(revealSubheader){
-    
-            new SplitText("h4", { type: "lines", linesClass: "lineChild" });
-            new SplitText("h4", { type: "lines", linesClass: "lineParent" });
-            const tl = gsap.timeline();
-            tl.from(".lineChild", {y:20, stagger:0.25});
-    
-          }
-        }, [revealSubheader]);
-
   return (
     <section className='vh-100' data-scroll-section>
-      <span ref={refSubheader} />
       <Container>
       <div>
         <div className='line-container'>
             <div className='line-div' data-scroll/>
         </div>
         <div>
-          <h4 className='section-title'>WHAT CLIENTS SAY ABOUT ME!</h4>
-          <h4 className='section-part'>PART 02</h4>
+          <h4 className='section-title' data-scroll>WHAT CLIENTS SAY ABOUT ME!</h4>
+          <h4 className='section-part' data-scroll>PART 02</h4>
         </div>
       </div>
         <div className='section-height'>

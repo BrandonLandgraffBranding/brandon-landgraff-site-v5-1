@@ -1,11 +1,11 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
+  "name": "Brandon Landgraff",
+  "description": "A Canadian based full stack Shopify designer.",
   "keywords": [
-    "contentful",
-    "gatsby",
-    "static",
-    "ssg"
+    "Full Stack Designer",
+    "Shopify",
+    "Canadian",
+    "Winnipeg"
   ],
   "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
   "success_url": "/",

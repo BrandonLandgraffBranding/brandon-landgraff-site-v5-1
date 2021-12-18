@@ -1,58 +1,4 @@
-/* .capabilities {
-    /* padding: 12vw 0 12vw 0;
-    margin: auto;  
-    width: 80%;
-}
-
-.line-div {
-    display: block;
-    height: 100%;
-    width: 1px;
-    background-color: #FCFCFC;
-}
-
-.line-container {
-    width: 100%;
-    height: 75%;
-    width: 1px;
-    position: relative;
-    overflow: hidden;
-}
-
-.line-container div {
-    clip-path: inset(0% 0% 100% 0%);
-    transition: clip-path 3s cubic-bezier(0.77, 0, 0.75, 1);
-}
-
-.line-div.is-reveal {
-    clip-path: inset(0% 0% 0% 0%);
-}
-
-.cabailities-container {
-    display: grid;
-    grid-template-columns: 24px auto;
-    grid-gap: 24px;
-    /* width: 30%; 
-}
-
-.capability-item h2 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 0px;
-}
-
-.capability-item p {
-    margin-top: 0px;
-    color: #4A4A4A;
-}
-
-#capabilities-text div {
-    opacity: 0;
-}
-
-#capabilities-text .isreveal div {
-    opacity: 1;
-} */
+/* IDs */
 
 #capabilities-text {
     padding-top: 0px;
@@ -75,8 +21,12 @@
     opacity: 1;
 }
 
+/* Classes */
+
 .capability-item h3 {
-    font-family: 'Libre Baskerville', serif;
+    font-family: dystopian, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 60px;
     color: #1C1C1C;
     line-height: 0.7em;
@@ -88,7 +38,7 @@
 }
 
 .cabailities-container {
-    padding-top: 6vw;
+    padding-top: 12vw;
 }
 
 .capability-item {
@@ -120,7 +70,7 @@
 
 @media only screen and (max-width: 768px) {
     #capabilities-text {
-        padding: 16vw 0 16vw 0;
+        padding: 2vw 0 2vw 0;
     }
     .capability-item h3 {
         font-size: 40px;

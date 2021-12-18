@@ -44,63 +44,37 @@ const FAQ = () => {
 
       }
     }, [reveal]);
-
-        //Reveal Subheader Animation
-        const refSubheader = useRef();
-
-        const [revealSubheader, setSubheaderReveal] = useState(false);
-    
-        const onSubheaderScreen = useOnScreen(refSubheader);
-    
-        useEffect(()=>{
-          if(onSubheaderScreen) setSubheaderReveal(onSubheaderScreen);
-        }, [onSubheaderScreen]);
-    
-        useEffect(() => {
-          if(revealSubheader){
-    
-            new SplitText("h4", { type: "lines", linesClass: "lineChild" });
-            new SplitText("h4", { type: "lines", linesClass: "lineParent" });
-            const tl = gsap.timeline();
-            tl.from(".lineChild", {y:20, stagger:0.25});
-    
-          }
-        }, [revealSubheader]);
   
   return (
     <section ref={ref} className={cn('acc-section vh-100')} data-scroll-section>
-      <span ref={refSubheader} />
       <Container>
         <div>
           <div className='line-container'>
               <div className='line-div' data-scroll/>
           </div>
           <div>
-            <h4 className='section-title'>WHAT IS A FULL STACK DESIGNER?</h4>
-            <h4 className='section-part'>PART 01</h4>
+            <h4 className='section-title' data-scroll>WHAT IS A FULL STACK DESIGNER?</h4>
+            <h4 className='section-part' data-scroll>PART 01</h4>
           </div>
         </div>
-        <div className='two-column section-height'>
-          <div className='text-explain'>
-            <h2 id="description-text" className={cn({'is-reveal text-margin': reveal})}>Have questions you want to ask me?</h2>
-          </div>
+        <div className='section-height section-wrap'>
+            <h2 id="description-text" className={cn({'is-reveal': reveal})}>Have questions you want to ask me?</h2>
           <div>
             <Accordion
-                title="What is your return policy?"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                title="How do you quote projects?"
+                content="I first learn about your project requirments during an initial meeting. Then I'll provide you a estimate based on the project requirements we discussed."
               />
               <Accordion
-                title="Which languages does you support?"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                title="How much do you charge?"
+                content="I charge between CAD$40-$80/hour depending on the project. If you are looking to get a project quote, I can provide you a brief project estimate. Then I invoice quarterly (e.g. 25% upfront, 25% when the project is half done, and etc...)."
               />
               <Accordion
-                title="Can I use a custom domain?"
-                content="
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </br>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </br>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+                title="How do we start a project?"
+                content="We should have a brief into call to get to know eachother. I'd love to learn about you, and your business (:"
+              /> 
+              <Accordion
+                title="Can I see some of your past work?"
+                content="Absolutely. If you send me an email, I'll show you a few different designs."
               /> 
             </div>
           </div>

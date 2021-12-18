@@ -8,7 +8,6 @@ import Container from '../container';
 
 import './capabilities.css';
 
-
 const Capabilities = () => {
 
     //Reveal Animation
@@ -70,50 +69,24 @@ const Capabilities = () => {
     
           }
         }, [revealsecond]);
-
-
-        //Reveal Subheader Animation
-        const refSubheader = useRef();
-
-        const [revealSubheader, setSubheaderReveal] = useState(false);
-    
-        const onSubheaderScreen = useOnScreen(refSubheader);
-    
-        useEffect(()=>{
-          if(onSubheaderScreen) setSubheaderReveal(onSubheaderScreen);
-        }, [onSubheaderScreen]);
-    
-        useEffect(() => {
-          if(revealSubheader){
-    
-            new SplitText("h4", { type: "lines", linesClass: "lineChild" });
-            new SplitText("h4", { type: "lines", linesClass: "lineParent" });
-            const tl = gsap.timeline();
-            tl.from(".lineChild", {y:20, stagger:0.25});
-    
-          }
-        }, [revealSubheader]);
   
   return (
     <section ref={ref} className={cn('capabilities-section vh-100')} data-scroll-section>
-      <span ref={refSubheader} data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-      data-scroll-id="#EDEDED" />
       <Container>
       <div>
         <div className='line-container'>
             <div className='line-div' data-scroll/>
         </div>
         <div>
-          <h4 className='section-title'>WHAT IS A FULL STACK DESIGNER?</h4>
-          <h4 className='section-part'>PART 01</h4>
+          <h4 className='section-title' data-scroll>WHAT ARE MY CAPABILITIES?</h4>
+          <h4 className='section-part' data-scroll>PART 02</h4>
         </div>
       </div>
-
-      <div className='section-height'>
+      <div className='section-height section-wrap'>
           <div className='text-explain'>
-            <h2 id='capabilities-text' className={cn({'is-reveal': reveal})}>A full stack designer is multidisciplinary individual who offers 
-            multiple skill sets but thinks about projects more holistically 
-            and comprehensively.</h2> 
+            <h2 id='capabilities-text' className={cn({'is-reveal': reveal})}>I’ve been known to be a design wizard! I
+            have a broad skillset but my bread and
+            butter is UX/UI Design. </h2> 
           </div>
             <div ref={refsecond} className='cabailities-container'>
                           <div className='capability-item'>

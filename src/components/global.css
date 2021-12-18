@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://use.typekit.net/ofj1axb.css");
 
 html * {
   box-sizing: border-box;
@@ -23,7 +24,9 @@ img {
 }
 
 h1 {
-  font-family: 'Libre Baskerville', serif;
+  font-family: dystopian, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 60px;
   font-weight: 500;
   color: #1C1C1C;
@@ -32,14 +35,14 @@ h1 {
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 500;
   z-index: 100;
 }
 
 h3 {
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #1C1C1C;
   z-index: 100;
@@ -56,14 +59,14 @@ h4 {
 
 h5 {
   font-family: 'Poppins', sans-serif;
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 500;
   z-index: 100;
 }
 
 p {
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
   z-index: 100;
 }
@@ -211,7 +214,12 @@ body{
 
 /* Section Height */
 .section-height {
-  padding: 12vw 0 12vw 0;
+  padding: 12vw 0 8vw 0;
+}
+
+.section-wrap {
+  width: 70%;
+  margin: auto;
 }
 
 /* Header and Subheader Custom Styling */
@@ -221,7 +229,7 @@ body{
 }
 
 .text-explain h2 {
-  padding-top: 6vw;
+  padding-top: 100px;
   font-size: 28px;
   max-width: 80%;
 } 
@@ -229,18 +237,32 @@ body{
 .section-part {
   float: right;
   max-width: 100px;
+  opacity: 0;
+  transition: opacity 5s; 
 }
 
 .section-title {
   float: left;
   max-width: 500px;
+  opacity: 0;
+  transition: opacity 5s; 
+}
+
+.section-title.is-reveal {
+  opacity: 1;
+}
+
+.section-part.is-reveal {
+  opacity: 1;
 }
 
 
 /* Mobile Optimized */
 @media only screen and (max-width: 768px) {
   h1 {
-    font-family: 'Libre Baskerville', serif;
+    font-family: dystopian, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 42px;
     font-weight: 500;
     color: #1C1C1C;
@@ -285,11 +307,11 @@ body{
   }
 
   .section-height {
-    padding: 18vw 0 18vw 0;
+    padding: 24vw 0 12vw 0;
   }
 
   .text-explain h2 {
-    padding-top: 12vw;
+    padding-top: 50px; 
     font-size: 18px;
     max-width: 100%;
   } 
@@ -302,6 +324,10 @@ body{
   .section-title {
     float: left;
     max-width: 250px;
+  }
+
+  .section-wrap {
+    width: 100%;
   }
   
 }

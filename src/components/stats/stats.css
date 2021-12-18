@@ -9,6 +9,9 @@
 }
 
 #count-up-text {
+    font-family: dystopian, sans-serif;
+    font-weight: 300;
+    font-style: normal;
     font-size: 240px;
     font-weight: 200;
     color: #4A4A4A;
@@ -18,6 +21,10 @@
 #count-up-text-description {
     font-weight: 700;
     color: #4A4A4A;
+}
+
+.stats-container {
+    width: 90%;
 }
 
 /* Classes */

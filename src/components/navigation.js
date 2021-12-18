@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'gatsby'
+// import { window } from 'browser-monads'
 
 import Logo from '../images/BrandonLandgraffMasterLogo.svg'
 import LogoMark from '../images/BrandonLandgraffMarkLogo.svg'
@@ -12,20 +14,21 @@ const Navigation = () => (
         <img id='nav-logo-master' src={Logo} alt="Brandon Landgraff Logo"/>
         <img id='nav-logo-mark' src={LogoMark} alt="Brandon Landgraff Logo Mark"/>
       </a>
-    <nav role="navigation" aria-label="Main">
+      <p id='nav-email'><a href="mailto:hello@brandonlandgraff.com">Say Hello 👋</a></p>
+    {/* <nav role="navigation" aria-label="Main">
       <ul className='nav-container'>
         <li className='nav-item'>
-          <a href="/" className="active">
+          <Link to="/" className="active">
             Home
-          </a>
+          </Link>
         </li>
         <li className='nav-item'>
-          <a href="/blog/" className='active'>
+          <Link to="/blog" className='active'>
             Blog
-          </a>
+          </Link>
         </li>
       </ul>
-    </nav>
+    </nav> */}
     </div>
   </div>
 )
