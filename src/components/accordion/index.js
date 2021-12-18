@@ -54,7 +54,7 @@ const FAQ = () => {
           </div>
           <div>
             <h4 className='section-title' data-scroll>WHAT IS A FULL STACK DESIGNER?</h4>
-            <h4 className='section-part' data-scroll>PART 01</h4>
+            <h4 className='section-part' data-scroll>PART 05</h4>
           </div>
         </div>
         <div className='section-height section-wrap'>

@@ -52,11 +52,26 @@
   padding-bottom: 24px;
 }
 
-#ask-for-availability {
-  /* font-family: 'Libre Baskerville', serif;*/
-  font-size: 100px; 
+#cap-deck a {
+  font-family: dystopian, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 36px; 
   color: #1C1C1C;
   line-height: 1.2em;
+}
+
+#social-media-link a {
+  font-family: dystopian, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 52px; 
+  color: #1C1C1C;
+  line-height: 1.2em;
+}
+
+.footer-center {
+  text-align: center;
 }
 
 #ask-for-availability div {
@@ -87,6 +102,14 @@
 
   .sm-item { 
     padding-left: 0px;
+  }
+
+  #cap-deck a {
+    font-size: 16px;
+  }
+
+  #social-media-link a {
+    font-size: 16px; 
   }
 
 }

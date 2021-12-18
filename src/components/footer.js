@@ -45,11 +45,13 @@ const Footer = () => {
     <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
     data-scroll-id="#FFFFFF" />
     <Container>
-        <h5 id='ask-for-availability'><a href="mailto:hello@brandonlandgraff.com">Say Hello 👋</a></h5>
+      <div className='footer-center'>
+      <h5 id='cap-deck'><a href="https://drive.google.com/file/d/1brfEGCS4jixtK5ykU4DYMcMet4-TMANE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download Capabilities Deck 🤌</a></h5>
+      </div>
         <div className='line-container'>
               <div className='line-div' data-scroll/>
           </div>
-      <div className='two-column'>
+      {/* <div className='two-column'>
         <div className='footer-information'>
         <img id='footer-logo' src={Logo} alt="Brandon Landgraff Logo"/>
         </div>
@@ -65,6 +67,13 @@ const Footer = () => {
             <a href="https://dribbble.com/brandonlandgraffbranding" target="_blank" rel="noopener noreferrer">Dribbble</a>
           </div>
         </div>
+      </div> */}
+
+      <div className='footer-center'>
+        <h5 id='social-media-link'><a href="mailto:hello@brandonlandgraff.com">hello@brandonlandgraff.com</a></h5>
+        <h5 id='social-media-link'><a href="https://www.instagram.com/brandonlandgraff/" target="_blank" rel="noopener noreferrer">Instagram</a></h5>
+        <h5 id='social-media-link'><a href="https://www.linkedin.com/in/brandon-landgraff/" target="_blank" rel="noopener noreferrer">LinkedIn</a></h5>
+        <h5 id='social-media-link'><a href="https://dribbble.com/brandonlandgraffbranding" target="_blank" rel="noopener noreferrer">Dribbble</a></h5>
       </div>
       <p id='credit'><strong>©Brandon Landgraff</strong></p>
     </Container>

@@ -96,24 +96,35 @@
   color: #2F2F2F;
 }
 
-@media only screen and (max-width: 768px) {
-  #nav-logo-master {
-    display: none;
-  }
+#nav-logo-master {
+  display: block;
+  max-height: 50px;
+  width: 150px;
+}
 
+@media only screen and (max-width: 768px) {
+  /* #nav-logo-master {
+    display: none;
+  } */
+/* 
   #nav-logo-mark {
     display: block;
     max-height: 32px;
     left: 0 !important;
+  } */
+
+  #nav-email {
+    font-size: 16px;
   }
 
 }
 
 @media only screen and (min-width: 769px) {
-  #nav-logo-master {
+  /* #nav-logo-master {
     display: block;
     max-height: 50px;
-  }
+    width: 150px;
+  } */
 
   #nav-logo-mark {
     display: none;
