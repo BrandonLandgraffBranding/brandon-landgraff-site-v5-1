@@ -1,7 +1,5 @@
-/* IDs */
-
 #capabilities-text {
-    padding-top: 0px;
+    padding: 0px;
     margin: 0;
 }
 
@@ -21,10 +19,8 @@
     opacity: 1;
 }
 
-/* Classes */
-
 .capability-item h3 {
-    font-family: dystopian, sans-serif;
+    font-family: dienstag, sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 60px;

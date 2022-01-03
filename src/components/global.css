@@ -35,7 +35,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: dienstag, sans-serif;
   font-size: 30px;
   font-weight: 500;
   z-index: 100;
@@ -72,20 +72,6 @@ p {
   z-index: 100;
 }
 
-/* a {
-  color: currentColor;
-  text-decoration: none;
-  transition: color 0.5s ease;
-  font-weight: 600;
-}
-
-a:hover {
-  color: #E5E5E5; 
-  color: #121212;
-  background-color: #E6AE00;
-  filter: blur(16px);
-} */
-
 a::before {  
   transform: scaleX(0);
   transform-origin: bottom right;
@@ -103,7 +89,6 @@ a::before {
   top: 0; right: 0; bottom: 0; left: 0;
   inset: 0 0 0 0;
   background: #E6AE00;
-  /* filter: blur(1px); */
   z-index: -1;
   transition: transform .3s ease;
 }
@@ -114,13 +99,7 @@ a {
   font-weight: 600;
   color: #4A4A4A;
   padding: 2px 5px 2px 5px;
-  /* font-size: 5rem; */
 }
-
-/* a.active {
-  color: #E6AE00;
-  font-weight: var(--bold);
-} */
 
 tt,
 code,
@@ -266,7 +245,7 @@ body{
 /* Mobile Optimized */
 @media only screen and (max-width: 768px) {
   h1 {
-    font-family: dystopian, sans-serif;
+    font-family: dienstag, sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 42px;
@@ -303,7 +282,7 @@ body{
   
   p {
     font-family: 'Poppins', sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 500;
   }
 

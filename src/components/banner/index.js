@@ -33,14 +33,14 @@ const Banner = () => {
                     <div className='banner-text-wrapper'>
                         <h1  id="banner-text">FULL STACK SHOPIFY DESIGNER</h1>
                     </div>
-                    {/* <div className='two-column-banner'>
+                    <div className='two-column-banner'>
                       <div className='line-container-banner'>
                           <div className='line-div-banner' data-scroll/>
                       </div>
                         <div className='banner-container-description'>
-                          <h2>My name is Brandon, and I'm a design wizard. 🧙</h2>
+                          <h2>Browse a few of my past projects.</h2>
                         </div>
-                    </div> */}
+                    </div>
                 </Container>
         </section>
         )

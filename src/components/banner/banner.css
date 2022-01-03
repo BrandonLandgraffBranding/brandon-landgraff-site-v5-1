@@ -42,7 +42,7 @@
   display: grid;
   gap: 48px;
   grid-template-columns: 1fr 1fr;
-  align-items: top;
+  align-items: center;
 }
 
 .banner-container-description {
@@ -98,7 +98,7 @@
 
 @media only screen and (max-width: 500px) {
   #banner-text {
-    font-size: 70px;
+    font-size: 48px;
     padding-top: 12vw;
   }
   

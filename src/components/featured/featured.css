@@ -1,15 +1,3 @@
-/* .img-container img {
-    clip-path: inset(0% 0% 0% 0%);
-    clip-path: inset(100% 0% 0% 0%); 
-    transition: clip-path 2s cubic-bezier(0.77, 0, 0.75, 1);
-}
-
-img.is-reveal {
-    clip-path: inset(0% 0% 0% 0%);
-} */
-
-/* inset needs to be sent to 100% for .blog-img-container after data scroll is connected! */
-
 .img-container-featured {
     width: 100%;
     position: relative;
@@ -19,10 +7,10 @@ img.is-reveal {
 
 .blog-img-container-featured {
     background-position: center;
-    /* width: 100%;
-    height: 100%; */
     width: 100%;
     height: 500px;
+    background-repeat: no-repeat;
+    background-size: 100%;
     clip-path: inset(100% 0% 0% 0%);
     transition: clip-path 1s cubic-bezier(0.77, 0, 0.75, 1);
 }
@@ -36,23 +24,6 @@ img.is-reveal {
         height: 300px;
     }
 }
-
-/* Compare */
-/* .img-container {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    opacity: 0.7;
-}
-
-.img-container img {
-    clip-path: inset(100% 0% 0% 0%);
-    transition: clip-path 2s cubic-bezier(0.77, 0, 0.75, 1);
-}
-
-img.is-reveal {
-    clip-path: inset(0% 0% 0% 0%);
-} */
 
 .header__title__project {
     line-height: 1.2em;
@@ -90,24 +61,23 @@ button.btn__project {
 .btn__project::before {  
     transform: scaleX(0);
     transform-origin: bottom right;
-  }
+}
   
-  .btn__project:hover::before {
+.btn__project:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
   
-  .btn__project::before {
+.btn__project::before {
     content: " ";
     display: block;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     inset: 0 0 0 0;
     background: #E6AE00;
-    /* filter: blur(1px); */
     z-index: -1;
     transition: transform .3s ease;
-  }
+}
 
 .header__content_project {
     margin-bottom: 50px;
