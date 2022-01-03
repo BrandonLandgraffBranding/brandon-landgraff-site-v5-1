@@ -49,6 +49,14 @@
   max-width: 50%;
 }
 
+.header__description__project {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.header__description__project.is-reveal {
+  opacity: 100;
+}
 .banner-container-description h2 {
   margin: 0px;
   color: #1C1C1C;

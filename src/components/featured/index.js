@@ -11,7 +11,7 @@ export default () => (
      query={graphql` 
  query FeaturedQuery {
    allContentfulBlog(
-       limit: 3
+       limit: 12
        sort: { fields: [createdAt], order: DESC }
        filter: {
        node_locale: {eq: "en-US",}
@@ -41,11 +41,6 @@ export default () => (
          {data.allContentfulBlog.edges.map(edge => (
              <div key={edge.node.id} className='header__section'>
 
-              <div className='line-container'>
-                <div className='line-div' data-scroll/>
-              </div>
-
-
                <div className='two-column'>
                
                <div className='header__content_project'>
@@ -62,6 +57,11 @@ export default () => (
                   {/* <img src={`url(${props.data.contentfulBlog.featuredImage.fluid.src})`} alt="Brandon Landgraff"/> */}
                 </div>
                </div>
+
+              <div className='line-container'>
+                <div className='line-div' data-scroll/>
+              </div>
+
              </div>
          ))}
          </Container>

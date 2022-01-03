@@ -38,7 +38,7 @@ const Banner = () => {
                           <div className='line-div-banner' data-scroll/>
                       </div>
                         <div className='banner-container-description'>
-                          <h2>Browse a few of my past projects.</h2>
+                          <h2 className='header__description__project' data-scroll>Browse a few of my past projects.</h2>
                         </div>
                     </div>
                 </Container>
