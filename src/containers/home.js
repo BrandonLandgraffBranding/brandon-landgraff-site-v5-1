@@ -1,14 +1,11 @@
 import React from 'react';
 
 import Banner from '../components/banner';
-import FullStackDesigner from '../components/fullstackdesigner';
-// import Reviews from '../components/reviews';
-import Bio from '../components/bio';
-import Stats from '../components/stats';
-import Capabilities from '../components/capabilities';
-// import Featured from '../components/featured';
+import Featured from '../components/featured';
 // import Projects from '../components/projects';
 import Faq from '../components/accordion';
+
+// import Lottie from '../components/diagram';
 
 import Layout from '../components/layout'
 
@@ -20,12 +17,7 @@ const Home = () => {
         <ScrollProvider>
           <Layout>
             <Banner />
-            <FullStackDesigner />
-            <Capabilities />
-            {/* <Reviews /> */}
-            <Bio />
-            <Stats />
-            {/* <Featured /> */}
+            <Featured />
             {/* <Projects /> */}
             <Faq />
           </Layout>  

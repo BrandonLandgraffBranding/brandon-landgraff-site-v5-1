@@ -48,7 +48,7 @@ const FAQ = () => {
   return (
     <section ref={ref} className={cn('acc-section vh-100')} data-scroll-section>
       <Container>
-        <div>
+        {/* <div>
           <div className='line-container'>
               <div className='line-div' data-scroll/>
           </div>
@@ -56,7 +56,7 @@ const FAQ = () => {
             <h4 className='section-title' data-scroll>WHAT IS A FULL STACK DESIGNER?</h4>
             <h4 className='section-part' data-scroll>PART 05</h4>
           </div>
-        </div>
+        </div> */}
         <div className='section-height section-wrap'>
             <h2 id="description-text" className={cn({'is-reveal': reveal})}>Have questions you want to ask me?</h2>
           <div>

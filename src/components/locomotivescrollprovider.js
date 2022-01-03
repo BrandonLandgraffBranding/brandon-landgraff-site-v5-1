@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import lottie from 'lottie-web';
 
 import useLocoScroll from '../components/hooks/useLocoScroll'
 
@@ -19,6 +20,19 @@ const ScrollProvider = ({ children, as = 'div' }) => {
     }
   }, [preloader]);
 
+    //Lottie Loading Animation
+    const container = useRef(null)
+
+    useEffect (() => {
+        lottie.loadAnimation({
+            container: container.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: require('../lottie/brandonlandgraffanimation1.json')
+        })
+    }, [])
+
   const [timer, setTimer] = React.useState(3);
 
   const id = React.useRef(null);
@@ -31,7 +45,7 @@ const ScrollProvider = ({ children, as = 'div' }) => {
   React.useEffect(() => {
     id.current = window.setInterval(() => {
       setTimer((time) => time - 1);
-    }, 1000);
+    }, 650);
     return () => clear();
   }, []);
 
@@ -48,8 +62,9 @@ const ScrollProvider = ({ children, as = 'div' }) => {
   return (
     <>
     {preloader ? ( <div className='loader-wrapper absolute'>
-    <h1>Brandon Landgraff</h1>
-    <h3>Full Stack Designer</h3>
+    {/* <h1>Brandon Landgraff</h1>
+    <h3>Full Stack Designer</h3> */}
+    <div className="loader-lottie" ref={container}></div>
     </div> 
     ) : (
     <Tag

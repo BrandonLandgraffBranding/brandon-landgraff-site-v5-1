@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
-import SplitText from '../../components/utils/Split3.min.js'
+import SplitText from '../utils/Split3.min.js'
 import cn from 'classnames';
-import useOnScreen from '../../components/hooks/useOnScreen.js'
+import useOnScreen from '../hooks/useOnScreen.js'
 
 import './blogbanner.css';
 
 import Container from '../container';
 
-const Banner = () => {
+const BlogBanner = () => {
 
     //Reveal Animation
     const ref = useRef();
@@ -43,14 +43,14 @@ const Banner = () => {
                         </div>
                     </div>
                 <Container>
-                <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
-                data-scroll-id="#1C1C1C" />
+                {/* <span data-scroll data-scroll-repeat data-scroll-call="pageColor" 
+                data-scroll-id="#1C1C1C" /> */}
                     <div className='banner-text-wrapper'>
-                        <h1 ref={ref} id="banner-text" className={cn({'is-reveal': reveal})}>Full Stack Shopify Designer</h1>
+                        <h1 ref={ref} id="banner-text" className={cn({'is-reveal': reveal})}>About Me</h1>
                     </div>
                 </Container>
         </section>
         )
 }
 
-export default Banner
+export default BlogBanner

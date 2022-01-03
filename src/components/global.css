@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url("https://use.typekit.net/ofj1axb.css");
+@import url("https://use.typekit.net/ofj1axb.css");
 
 html * {
   box-sizing: border-box;
@@ -24,7 +25,7 @@ img {
 }
 
 h1 {
-  font-family: dystopian, sans-serif;
+  font-family: dienstag, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 60px;
@@ -182,6 +183,10 @@ code {
   color: #FCFCFC;
 }
 
+.loader-lottie {
+  width: 300px;
+}
+
 
 .absolute {
   position: fixed;
@@ -210,6 +215,7 @@ body{
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* Section Height */
@@ -269,9 +275,9 @@ body{
   }
   
   h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: dienstag, sans-serif;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
   }
   
   h3 {
@@ -343,7 +349,7 @@ body{
   left: 50px;
   width: 120px; 
   height: 480px; 
-  background-color: #E2A400;
+  background-color: #D0D0D0;
   filter: blur(16px);
   z-index: -100;
 }
@@ -355,7 +361,7 @@ body{
   width: 236px; 
   height: 355px; 
   border-radius: 0 350px 350px 0;
-  background-color: #E2A400;
+  background-color: #D0D0D0;
   filter: blur(16px);
   z-index: -100;
 }
@@ -367,7 +373,7 @@ body{
   width: 151px; 
   height: 226px; 
   border-radius: 0 350px 350px 0;
-  background-color: #E2A400;
+  background-color: #D0D0D0;
   filter: blur(16px);
   z-index: -100;
 }

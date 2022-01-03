@@ -14,7 +14,7 @@ const Diagram = () => {
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            animationData: require('./office.json')
+            animationData: require('./brandonlandgraffanimation1.json')
         })
     }, [])
 

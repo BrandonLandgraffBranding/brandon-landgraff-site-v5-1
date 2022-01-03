@@ -79,7 +79,7 @@ const Capabilities = () => {
         </div>
         <div>
           <h4 className='section-title' data-scroll>WHAT ARE MY CAPABILITIES?</h4>
-          <h4 className='section-part' data-scroll>PART 02</h4>
+          <h4 className='section-part' data-scroll>PART 03</h4>
         </div>
       </div>
       <div className='section-height section-wrap'>

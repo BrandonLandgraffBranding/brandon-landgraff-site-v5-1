@@ -10,11 +10,16 @@ import './navigation.css'
 const Navigation = () => (
   <div className='menu'>
     <div className='menu-wrapper'>
-      {/* <a href="/" className='nav-logo'> */}
+      <a href="/" className='nav-logo'>
         <img id='nav-logo-master' src={Logo} alt="Brandon Landgraff Logo"/>
         {/* <img id='nav-logo-mark' src={LogoMark} alt="Brandon Landgraff Logo Mark"/> */}
-      {/* </a> */}
-      <p id='nav-email'><a href="mailto:hello@brandonlandgraff.com">Say Hello 👋</a></p>
+      </a>
+      <div>
+          <Link to="/about" className="active">
+              About Me
+          </Link>
+        {/* <p id='nav-email'><a href="mailto:hello@brandonlandgraff.com">Say Hello 👋</a></p> */}
+      </div>
     {/* <nav role="navigation" aria-label="Main">
       <ul className='nav-container'>
         <li className='nav-item'>
