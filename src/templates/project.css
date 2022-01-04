@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     clip-path: inset(100% 0% 0% 0%);
-    transition: clip-path 1s cubic-bezier(0.77, 0, 0.75, 1);
+    transition: clip-path 2s cubic-bezier(0.77, 0, 0.75, 1);
 }
 
 .blog-img-container.is-reveal {
@@ -104,6 +104,10 @@
 
     .blog-img-container  {
         height: 400px;
+    }
+
+    .project__wrapper {
+        padding-top: 12px;
     }
 
     .project__title__wrapper h1 {
