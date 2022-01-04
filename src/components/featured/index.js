@@ -45,7 +45,7 @@ export default () => (
                
                <div className='header__content_project'>
                  <div className='header__info'>
-                   <h1 className='header__title__project' data-scroll>{edge.node.title}</h1>
+                   <h2 className='header__title__project' data-scroll>{edge.node.title}</h2>
                    {/* <p className='header__subtitle'>{edge.node.shortDescription}</p> */}
                    <button onClick={() => navigate(`/project/${edge.node.slug}`)} className='btn__project' data-scroll>VIEW PROJECT <Chevron className='chevron-next' width={14} fill={"#4A4A4A"} /></button>
                  </div>
